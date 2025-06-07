@@ -1,0 +1,1980 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-05-15T08:59:12Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/95060645",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "1",
+        "addr:postcode": "5020",
+        "addr:street": "Carl-Zuckmayer-Straße",
+        "at_bev:addr_date": "2020-04-01",
+        "brand": "B&B Hotels",
+        "brand:wikidata": "Q794939",
+        "contact:phone": "+43 662 2144",
+        "name": "B&B Hotel Salzburg-Nord",
+        "tourism": "hotel",
+        "website": "https://www.hotel-bb.com/",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0577026,
+          47.8296176
+        ]
+      },
+      "id": "node/95060645"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/266329641",
+        "name": "Pension",
+        "rooms": "18",
+        "stars": "2",
+        "tourism": "hotel",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0413,
+          47.808625
+        ]
+      },
+      "id": "node/266329641"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/266329642",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "5-7",
+        "addr:postcode": "5020",
+        "addr:street": "Schwarzstraße",
+        "internet_access": "wlan",
+        "name": "Hotel Sacher",
+        "stars": "5",
+        "tourism": "hotel",
+        "wheelchair": "yes",
+        "wikidata": "Q1631024",
+        "wikipedia": "de:Hotel Sacher Salzburg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0432934,
+          47.8022003
+        ]
+      },
+      "id": "node/266329642"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/268056312",
+        "addr:city": "Salzburg",
+        "addr:housenumber": "7",
+        "addr:postcode": "5020",
+        "addr:street": "Wolf-Dietrich-Straße",
+        "check_date": "2024-09-07",
+        "name": "Altstadthotel Wolf-Dietrich",
+        "stars": "4",
+        "tourism": "hotel",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0480584,
+          47.804769
+        ]
+      },
+      "id": "node/268056312"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/268056344",
+        "name": "Hotel Schwarzes Rössl",
+        "tourism": "hotel",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0456096,
+          47.8027394
+        ]
+      },
+      "id": "node/268056344"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/268056345",
+        "addr:housenumber": "9",
+        "addr:street": "Linzer Gasse",
+        "amenity": "restaurant",
+        "check_date:opening_hours": "2023-03-17",
+        "diet:vegan": "yes",
+        "diet:vegetarian": "yes",
+        "indoor_seating": "yes",
+        "name": "Gablerbräu",
+        "opening_hours": "Mo-Su 11:30-24:00",
+        "outdoor_seating": "no",
+        "phone": "+43-662-88 9 65",
+        "stars": "3",
+        "tourism": "hotel",
+        "website": "https://www.gablerbrau.at/",
+        "wheelchair": "yes",
+        "wikidata": "Q59536317"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0455222,
+          47.8024277
+        ]
+      },
+      "id": "node/268056345"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/268243677",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "4A",
+        "addr:postcode": "5020",
+        "addr:street": "Sigmund-Haffner-Gasse",
+        "name": "Hotel Elefant",
+        "tourism": "hotel",
+        "website": "https://www.hotelelefant.at/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0444425,
+          47.7996822
+        ]
+      },
+      "id": "node/268243677"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/268243716",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "17",
+        "addr:postcode": "5020",
+        "addr:street": "Goldgasse",
+        "check_date": "2024-06-06",
+        "name": "Hotel am Dom",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0460785,
+          47.7990383
+        ]
+      },
+      "id": "node/268243716"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/317986587",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housename": "Haus Arenberg",
+        "addr:housenumber": "8",
+        "addr:postcode": "5020",
+        "addr:street": "Blumensteinstraße",
+        "at_bev:addr_date": "2024-04-01",
+        "name": "Hotel Pension Haus Arenberg",
+        "phone": "+43662640097",
+        "tourism": "hotel",
+        "website": "https://www.arenberg-salzburg.at/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0616073,
+          47.8008836
+        ]
+      },
+      "id": "node/317986587"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/430422255",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "1",
+        "addr:postcode": "5020",
+        "addr:street": "Paris-Lodron-Straße",
+        "check_date": "2024-07-03",
+        "email": "mirabell@imlauer.com",
+        "fax": "+43 662 881687",
+        "name": "Hotel am Mirabellplatz",
+        "operator": "IMLAUER Hotel & Restaurant GmbH",
+        "phone": "+43 662 881688",
+        "stars": "4",
+        "tourism": "hotel",
+        "website": "https://imlauer.com/hotel-am-mirabellplatz/",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0440728,
+          47.8046102
+        ]
+      },
+      "id": "node/430422255"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/473880954",
+        "addr:city": "Salzburg",
+        "addr:housenumber": "115",
+        "addr:postcode": "5020",
+        "addr:street": "Alpenstraße",
+        "contact:phone": "+43 662 639000",
+        "contact:website": "http://www.amadehotel.at",
+        "name": "Amadéhotel Hotel Schaffenrath",
+        "stars": "4",
+        "tourism": "hotel",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0697721,
+          47.7730707
+        ]
+      },
+      "id": "node/473880954"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/498474542",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "21",
+        "addr:street": "Sterneckstraße",
+        "brand": "Holiday Inn",
+        "brand:wikidata": "Q2717882",
+        "name": "Holiday Inn Salzburg",
+        "stars": "4",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0541164,
+          47.8089938
+        ]
+      },
+      "id": "node/498474542"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/509308986",
+        "name": "Doktorwirt",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0838003,
+          47.778884
+        ]
+      },
+      "id": "node/509308986"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/579808329",
+        "contact:email": "hallo@hirschengruen.at",
+        "contact:phone": "+43 664 4110964",
+        "name": "Zum Hirschen",
+        "tourism": "hotel",
+        "website": "https://hirschengruen.at/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0414988,
+          47.8109013
+        ]
+      },
+      "id": "node/579808329"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/621122285",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "14A",
+        "addr:postcode": "5020",
+        "addr:street": "Bayerhamerstraße",
+        "name": "Hotel Mercure Salzburg City",
+        "tourism": "hotel",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0509281,
+          47.8097745
+        ]
+      },
+      "id": "node/621122285"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/651028171",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "20",
+        "addr:postcode": "5020",
+        "addr:street": "Fürbergstraße",
+        "name": "M-Hotel Meininger",
+        "phone": "+43 (0) 720 8834 14",
+        "rooms": "101",
+        "tourism": "hotel",
+        "website": "https://www.meininger-hotels.com/de/hotels/salzburg/hotel-salzburg-zentrum/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0655691,
+          47.8084426
+        ]
+      },
+      "id": "node/651028171"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/676214236",
+        "breakfast": "yes",
+        "contact:email": "check-in@itzlinger-hof.at",
+        "contact:phone": "+43 662 451210",
+        "internet_access": "wlan",
+        "name": "Itzlinger-Hof",
+        "smoking": "separated",
+        "tourism": "hotel",
+        "website": "https://www.itzlinger-hof.at/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0442109,
+          47.8199194
+        ]
+      },
+      "id": "node/676214236"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/689567084",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "12",
+        "addr:postcode": "5020",
+        "addr:street": "Hubert-Sattler-Gasse",
+        "name": "Vier Jahreszeiten",
+        "stars": "4",
+        "tourism": "hotel",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0463012,
+          47.8070481
+        ]
+      },
+      "id": "node/689567084"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/690524637",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "61",
+        "addr:postcode": "5020",
+        "addr:street": "Auerspergstraße",
+        "bar": "yes",
+        "email": "info@auersperg.at",
+        "fax": "+43 662 88944-55",
+        "internet_access": "wlan",
+        "name": "Boutique Hotel Auersperg Salzburg",
+        "phone": "+43 662 889440",
+        "stars": "4",
+        "tourism": "hotel",
+        "website": "https://www.auersperg.at/de/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0497054,
+          47.8068476
+        ]
+      },
+      "id": "node/690524637"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/690526709",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "20",
+        "addr:postcode": "5020",
+        "addr:street": "Sterneckstraße",
+        "brand": "Dorint",
+        "brand:wikidata": "Q1700015",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Dorint City-Hotel Salzburg",
+        "opening_hours": "24/7",
+        "stars": "4",
+        "tourism": "hotel",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0537974,
+          47.808597
+        ]
+      },
+      "id": "node/690526709"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/694145591",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "4",
+        "addr:postcode": "5020",
+        "addr:street": "Makartplatz",
+        "check_date": "2024-07-21",
+        "name": "Bristol",
+        "stars": "5",
+        "tourism": "hotel",
+        "wheelchair": "limited",
+        "wikidata": "Q1630842"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.043801,
+          47.8032267
+        ]
+      },
+      "id": "node/694145591"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/694146296",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "54",
+        "addr:postcode": "5020",
+        "addr:street": "Linzer Gasse",
+        "check_date": "2024-05-06",
+        "name": "Pension zum jungen Fuchs",
+        "stars": "2",
+        "tourism": "hotel",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0477444,
+          47.8038911
+        ]
+      },
+      "id": "node/694146296"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/694146346",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "43-45",
+        "addr:postcode": "5020",
+        "addr:street": "Linzer Gasse",
+        "name": "Hotel Amadeus",
+        "phone": "+43 662 87 14 01",
+        "stars": "4",
+        "tourism": "hotel",
+        "website": "https://www.hotelamadeus.at/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.047892,
+          47.8041754
+        ]
+      },
+      "id": "node/694146346"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/694146750",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "20",
+        "addr:postcode": "5020",
+        "addr:street": "Markus-Sittikus-Straße",
+        "bar": "yes",
+        "check_date": "2024-04-21",
+        "internet_access": "wlan",
+        "internet_access:fee": "customers",
+        "name": "Sittikus",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "phone": "+43 662 87 11 21",
+        "reservation": "yes",
+        "smoking": "outside",
+        "source": "survey",
+        "stars": "4",
+        "tourism": "hotel",
+        "website": "https://www.markus-sittikus.at",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0424436,
+          47.8082054
+        ]
+      },
+      "id": "node/694146750"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/694226803",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "6",
+        "addr:postcode": "5020",
+        "addr:street": "Bergstraße",
+        "name": "City-Hotel Trumer-Stube",
+        "phone": "+43 662 874776",
+        "rooms": "20",
+        "stars": "3",
+        "tourism": "hotel",
+        "website": "https://www.trumer-stube.at/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0458715,
+          47.8032505
+        ]
+      },
+      "id": "node/694226803"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/794711508",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "1",
+        "addr:postcode": "5020",
+        "addr:street": "Ernst-Sompek-Straße",
+        "name": "Leonardo",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0377132,
+          47.7973201
+        ]
+      },
+      "id": "node/794711508"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/814217474",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "37",
+        "addr:postcode": "5020",
+        "addr:street": "Getreidegasse",
+        "check_date": "2024-07-21",
+        "name": "Hotel Goldener Hirsch",
+        "tourism": "hotel",
+        "wheelchair": "no",
+        "wikidata": "Q1630902",
+        "wikipedia": "de:Hotel Goldener Hirsch (Salzburg)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0409524,
+          47.7998874
+        ]
+      },
+      "id": "node/814217474"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/827201684",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "20",
+        "addr:postcode": "5020",
+        "addr:street": "Linzer Gasse",
+        "check_date": "2024-05-06",
+        "name": "Stadtkrug",
+        "stars": "3",
+        "tourism": "hotel",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0460372,
+          47.8026096
+        ]
+      },
+      "id": "node/827201684"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/827213410",
+        "name": "Hotel Goldene Krone",
+        "stars": "3",
+        "tourism": "hotel",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0473219,
+          47.8035348
+        ]
+      },
+      "id": "node/827213410"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/827231602",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "1",
+        "addr:postcode": "5020",
+        "addr:street": "Schallmooser Hauptstraße",
+        "at_bev:addr_date": "2024-10-01",
+        "check_date": "2024-05-09",
+        "contact:email": "info@hofwirt-salzburg.at",
+        "contact:instagram": "https://www.instagram.com/hofwirt_salzburg/",
+        "contact:phone": "+43 662 872 172",
+        "contact:website": "https://hofwirt-salzburg.at",
+        "internet_access": "wlan",
+        "internet_access:fee": "customers",
+        "name": "Hofwirt",
+        "opening_hours": "24/7",
+        "stars": "3",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0498006,
+          47.8048738
+        ]
+      },
+      "id": "node/827231602"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/828459040",
+        "check_date": "2024-07-29",
+        "name": "Stein",
+        "stars": "4",
+        "tourism": "hotel",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0451999,
+          47.8013241
+        ]
+      },
+      "id": "node/828459040"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1069282500",
+        "bett_and_bike:ref": "SBG-506",
+        "bettundbike": "yes",
+        "breakfast": "organic",
+        "ele": "424",
+        "internet_access": "yes",
+        "internet_access:fee": "no",
+        "name": "Hotel zur Post",
+        "note": "Familien geführtes, kleines Stadthotel mit Bio Frühstück.",
+        "operator": "Georg Maier",
+        "phone": "+43 (0) 662 / 83 23 39 - 0",
+        "smoking": "outside",
+        "stars": "3",
+        "tourism": "hotel",
+        "website": "https://www.hotelzurpost.info/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0200237,
+          47.7984322
+        ]
+      },
+      "id": "node/1069282500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1364842962",
+        "name": "18th Pension Jahn - Salzburg",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0418412,
+          47.8140765
+        ]
+      },
+      "id": "node/1364842962"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1423972388",
+        "internet_access": "wlan",
+        "internet_access:fee": "customers",
+        "name": "Hotel Gasthof Junior",
+        "phone": "+43 662 827 648",
+        "stars": "3,5",
+        "tourism": "hotel",
+        "website": "https://www.hoteljunior.at"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0179451,
+          47.8017593
+        ]
+      },
+      "id": "node/1423972388"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1424042210",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "7",
+        "addr:postcode": "5020",
+        "addr:street": "Maxglaner Hauptstraße",
+        "email": "info@salzburgastoria.com",
+        "internet_access": "wlan",
+        "internet_access:fee": "yes",
+        "name": "Hotel Astoria",
+        "phone": "+43 662 834277",
+        "tourism": "hotel",
+        "website": "https://www.salzburgastoria.at/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0257289,
+          47.7963476
+        ]
+      },
+      "id": "node/1424042210"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1446304252",
+        "description": "Saisonhotel (01.07. -  30.09.)",
+        "name": "AllYouNeed Hotel",
+        "stars": "3",
+        "tourism": "hotel",
+        "website": "https://www.allyouneedhotels.at"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0492826,
+          47.8040952
+        ]
+      },
+      "id": "node/1446304252"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1447945868",
+        "internet_access": "wlan",
+        "internet_access:fee": "customers",
+        "name": "Hotel Drei Kreuz",
+        "phone": "+43 662 87 27 90",
+        "rooms": "24",
+        "stars": "3",
+        "tourism": "hotel",
+        "website": "https://www.hoteldreikreuz.at#"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0553355,
+          47.8078051
+        ]
+      },
+      "id": "node/1447945868"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1606475571",
+        "check_date": "2024-09-07",
+        "name": "Atel Hotel Lasserhof",
+        "source": "http://www.lasserhof.com",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.045625,
+          47.8091148
+        ]
+      },
+      "id": "node/1606475571"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1760308393",
+        "check_date:internet_access": "2023-08-21",
+        "contact:email": "info@pension-elisabeth.at",
+        "contact:fax": "+43 662 871664",
+        "contact:phone": "+43 662 871664",
+        "contact:website": "http://www.pension-elisabeth.at/",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Pension Elisabeth",
+        "stars": "1",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0541124,
+          47.8135991
+        ]
+      },
+      "id": "node/1760308393"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1818792612",
+        "name": "Goldenes Theater",
+        "phone": "+43 662 881681",
+        "stars": "4",
+        "tourism": "hotel",
+        "website": "https://www.gt-hotel-salzburg.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0519212,
+          47.8056389
+        ]
+      },
+      "id": "node/1818792612"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1819140643",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "6",
+        "addr:postcode": "5020",
+        "addr:street": "Vogelweiderstraße",
+        "at_bev:addr_date": "2024-04-01",
+        "contact:email": "office@hotel-ganslhof.at",
+        "contact:phone": "+43 662 873853",
+        "contact:website": "https://hotel-ganslhof.at/",
+        "internet_access": "wlan",
+        "internet_access:fee": "customers",
+        "name": "Hotel Ganslhof",
+        "stars": "3",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.055707,
+          47.8075884
+        ]
+      },
+      "id": "node/1819140643"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1960031961",
+        "internet_access": "yes",
+        "name": "arte vida",
+        "tourism": "hotel",
+        "website": "https://www.artevida.at/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0446502,
+          47.8025194
+        ]
+      },
+      "id": "node/1960031961"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1986986614",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "54",
+        "addr:street": "Linzer Bundesstraße",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Hotel Turnerwirt",
+        "phone": "+43 (0)662-640630",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0701802,
+          47.8158813
+        ]
+      },
+      "id": "node/1986986614"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2084505878",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "15",
+        "addr:postcode": "5020",
+        "addr:street": "Leopoldskronstraße",
+        "email": "office@villaverde-salzburg.at",
+        "name": "Villa Verde",
+        "phone": "+43662827579",
+        "tourism": "hotel",
+        "website": "http://www.villaverde-salzburg.at/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0319796,
+          47.7928438
+        ]
+      },
+      "id": "node/2084505878"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2180366789",
+        "name": "Lehenerhof",
+        "tourism": "hotel",
+        "website": "https://www.lehenerhof.at/",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0277523,
+          47.8116698
+        ]
+      },
+      "id": "node/2180366789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2367308761",
+        "addr:city": "Salzburg",
+        "addr:housenumber": "13",
+        "addr:postcode": "5020",
+        "addr:street": "Südtiroler Platz",
+        "check_date": "2024-04-13",
+        "name": "H+ Hotel Salzburg",
+        "phone": "+4366222850",
+        "rooms:wheelchair": "2",
+        "smoking": "outside",
+        "source": "http://www.ramada.com/hotels/austria/salzburg/ramada-salzburg-city-centre/hotel-overview",
+        "toilets:wheelchair": "yes",
+        "tourism": "hotel",
+        "website": "https://www.h-hotels.com/de/hplus/hotels/hplus-hotel-salzburg",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0450983,
+          47.8136977
+        ]
+      },
+      "id": "node/2367308761"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2507740760",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "58-60",
+        "addr:postcode": "5020",
+        "addr:street": "Elisabethkai",
+        "bar": "yes",
+        "brand": "Motel One",
+        "brand:wikidata": "Q391080",
+        "brand:wikipedia": "en:Motel One",
+        "contact:email": "salzburg-mirabell@motel-one.com",
+        "contact:phone": "+43 662 885200",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Motel One Salzburg-Mirabell",
+        "smoking": "no",
+        "tourism": "hotel",
+        "website": "https://www.motel-one.com/de/hotels/salzburg/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0375846,
+          47.8104236
+        ]
+      },
+      "id": "node/2507740760"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2519507804",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "2",
+        "addr:postcode": "5020",
+        "addr:street": "Riedenburgerstraße",
+        "email": "hotel@hauswartenberg.com",
+        "name": "Haus Wartenberg",
+        "tourism": "hotel",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0293696,
+          47.79857
+        ]
+      },
+      "id": "node/2519507804"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2551706674",
+        "addr:city": "Salzburg",
+        "addr:housenumber": "6",
+        "addr:postcode": "5020",
+        "addr:street": "Ignaz-Härtl-Straße",
+        "brand": "Best Western Plus",
+        "brand:wikidata": "Q38623383",
+        "brand:wikipedia": "en:Best Western",
+        "email": "salzburg@plazahotels.de",
+        "internet_access": "wlan",
+        "internet_access:fee": "customers",
+        "name": "Best Western Plus Amedia Art Salzburg",
+        "official_name": "Aiden by Best Western",
+        "phone": "+43 662 650 100",
+        "rooms": "101",
+        "stars": "4",
+        "tourism": "hotel",
+        "website": "https://plazahotels.de/hotel-salzburg/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0642752,
+          47.8093201
+        ]
+      },
+      "id": "node/2551706674"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2552995748",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "7",
+        "addr:postcode": "5020",
+        "addr:street": "Saint-Julien-Straße",
+        "email": "salzburgexpress@plazahotels.de",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Plaza Inn Salzburg City",
+        "phone": "+43 662873121",
+        "smoking": "no",
+        "stars": "3",
+        "tourism": "hotel",
+        "website": "https://plazahotels.de/hotel-salzburg-city/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0384328,
+          47.8111064
+        ]
+      },
+      "id": "node/2552995748"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2821300438",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "14",
+        "addr:postcode": "5020",
+        "addr:street": "Rainerstraße",
+        "check_date": "2024-04-12",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Hotel IMLAUER & Bräu",
+        "operator": "IMLAUER Hotels & Restaurants",
+        "stars": "4",
+        "toilets:wheelchair": "yes",
+        "tourism": "hotel",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0416181,
+          47.8087152
+        ]
+      },
+      "id": "node/2821300438"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2965112347",
+        "name": "Hotel Salzburg",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.9914957,
+          47.7928609
+        ]
+      },
+      "id": "node/2965112347"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3118084061",
+        "name": "Bloberger Hof",
+        "phone": "+43 662 830227",
+        "tourism": "hotel",
+        "website": "https://www.blobergerhof.at/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0145644,
+          47.7604179
+        ]
+      },
+      "id": "node/3118084061"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3207695669",
+        "name": "Star Inn Hotel Gablerbräu",
+        "stars": "3",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0452279,
+          47.8026353
+        ]
+      },
+      "id": "node/3207695669"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3603738514",
+        "addr:city": "Salzburg",
+        "addr:housenumber": "114a",
+        "addr:postcode": "5020",
+        "addr:street": "Münchner Bundesstraße",
+        "check_date": "2024-03-23",
+        "name": "Austria Trend Hotel Salzburg Mitte",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0051273,
+          47.8292651
+        ]
+      },
+      "id": "node/3603738514"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3666211230",
+        "email": "info@haunspergerhof.at",
+        "fax": "+43 662 873457 - 20",
+        "name": "Hotel Haunspergerhof",
+        "phone": "+43 662 873457 - 0",
+        "tourism": "hotel",
+        "website": "https://www.haunspergerhof.at/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0392864,
+          47.8132409
+        ]
+      },
+      "id": "node/3666211230"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3666253625",
+        "name": "Hotel Scherer",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0403136,
+          47.8132569
+        ]
+      },
+      "id": "node/3666253625"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3731312282",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "4",
+        "addr:postcode": "5020",
+        "addr:street": "Wolf-Dietrich-Straße",
+        "at_bev:addr_date": "2020-04-01",
+        "name": "Residenz Wolf-Dietrich",
+        "phone": "+43 662 871275",
+        "smoking": "no",
+        "tourism": "hotel",
+        "website": "https://www.salzburg-hotel.at",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0483673,
+          47.804683
+        ]
+      },
+      "id": "node/3731312282"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3827253857",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "33",
+        "addr:postcode": "5020",
+        "addr:street": "Kaigasse",
+        "email": "info@kasererbraeu.at",
+        "internet_access": "wlan",
+        "name": "Kasererbraeu",
+        "phone": "+43 662 842445-51",
+        "smoking": "outside",
+        "stars": "4",
+        "tourism": "hotel",
+        "website": "https://www.kasererbraeu.at/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0492938,
+          47.7969589
+        ]
+      },
+      "id": "node/3827253857"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4145021208",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "15",
+        "addr:postcode": "5020",
+        "addr:street": "Judengasse",
+        "alt_name": "Radisson Blu Salzburg",
+        "bar": "yes",
+        "brand": "Radisson Blu",
+        "brand:wikidata": "Q7281341",
+        "email": "info.altstadt@radissonblu.com",
+        "internet_access": "wlan",
+        "name": "Radisson Blu Altstadt Hotel",
+        "phone": "+43 662 84 85 71 0",
+        "reservation": "recommended",
+        "rooms": "62",
+        "stars": "5",
+        "tourism": "hotel",
+        "website": "https://www.radissonhotels.com/de-de/hotels/radisson-blu-salzburg-altstadt/kontakt",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0467262,
+          47.7997145
+        ]
+      },
+      "id": "node/4145021208"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4281605402",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "85",
+        "addr:postcode": "5020",
+        "addr:street": "Nonntaler Hauptstraße",
+        "air_conditioning": "no",
+        "email": "info@pension-herbert.at",
+        "internet_access": "wlan",
+        "internet_access:fee": "customers",
+        "name": "Hotel Pension Herbert",
+        "opening_hours": "Mo-Su 08:00-21:00",
+        "phone": "+43 662 820308",
+        "tourism": "hotel",
+        "website": "https://www.pension-herbert.at/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0497138,
+          47.781721
+        ]
+      },
+      "id": "node/4281605402"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4338088837",
+        "name": "Hotel Jedermann",
+        "phone": "+43 662 8732410",
+        "tourism": "hotel",
+        "website": "https://www.hotel-jedermann.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0546112,
+          47.8080101
+        ]
+      },
+      "id": "node/4338088837"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4461678657",
+        "email": "info@villaceconi.at",
+        "internet_access": "yes",
+        "internet_access:fee": "yes",
+        "level": "2",
+        "name": "Villa Ceconi",
+        "note": "Reception is at Hotel zur Post, Maxglaner Hauptstraße 45",
+        "operator": "Georg Maier",
+        "phone": "+43 662 832339-0",
+        "smoking": "outside",
+        "stars": "3",
+        "tourism": "hotel",
+        "website": "https://www.villaceconi.at/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0214103,
+          47.797042
+        ]
+      },
+      "id": "node/4461678657"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4469087872",
+        "addr:city": "Salzburg",
+        "addr:housenumber": "4",
+        "addr:postcode": "5020",
+        "addr:street": "Wehrgasse",
+        "description": "Unser Garten Haus liegt hinter dem Bio-Hotel zur Post und ist sehr ruhig gelegen. Im Garten gibt es eine gemütliche Sitzecke mit Liegen.",
+        "ele": "424",
+        "internet_access": "wlan",
+        "level": "2",
+        "name": "Das Grüne Bio-Hotel zur Post - Garten Haus",
+        "operator": "Georg Maier",
+        "phone": "+43 662 832339-0",
+        "smoking": "outside",
+        "stars": "3",
+        "tourism": "hotel",
+        "website": "www.dasgrünehotel.at",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0204438,
+          47.7986376
+        ]
+      },
+      "id": "node/4469087872"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4469195749",
+        "addr:city": "Salzburg",
+        "addr:housenumber": "47",
+        "addr:postcode": "5020",
+        "addr:street": "Maxglaner Hauptstraße",
+        "description": "Das Bürger Haus ist ein Gästehaus vom Bio-Hotel zur Post .",
+        "ele": "424",
+        "internet_access": "yes",
+        "name": "Hotel zur Post - Bürger Haus",
+        "operator": "Georg Maier",
+        "phone": "+43 662 8323390",
+        "smoking": "outside",
+        "tourism": "hotel",
+        "website": "https://www.stadthotel-salzburg.at/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.019831,
+          47.7985885
+        ]
+      },
+      "id": "node/4469195749"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4829006921",
+        "addr:city": "Salzburg",
+        "addr:housenumber": "56-58",
+        "addr:postcode": "5020",
+        "addr:street": "Leopoldskronstraße",
+        "check_date": "2024-08-20",
+        "description": "Als Schlosshotel am See ist Hotel Schloss Leopoldskron sowohl traumhaftes Luxushotel für Urlaub in Salzburg, als auch außergewöhnliche Eventlocation für Veranstaltungen wie Seminare, Kongresse, Konferenzen und Tagungen.",
+        "email": "reception@schloss-leopoldskron.com",
+        "fax": "+43 662 83983-80",
+        "name": "Hotel Schloss Leopoldskron",
+        "opening_hours": "24/7",
+        "phone": "+43 662 83983",
+        "ref:vatin": "ATU 33978602",
+        "tourism": "hotel",
+        "website": "https://www.schloss-leopoldskron.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.037632,
+          47.7889113
+        ]
+      },
+      "id": "node/4829006921"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5341844006",
+        "name": "Art House",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0391257,
+          47.8005587
+        ]
+      },
+      "id": "node/5341844006"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5381270676",
+        "check_date": "2024-05-14",
+        "internet_access": "yes",
+        "internet_access:fee": "no",
+        "name": "Villa Carlton",
+        "smoking": "no",
+        "stars": "4",
+        "tourism": "hotel",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0388788,
+          47.8075456
+        ]
+      },
+      "id": "node/5381270676"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5381685589",
+        "name": "Hotel Modus",
+        "tourism": "hotel",
+        "website": "https://hotel-modus.at/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0482859,
+          47.8088543
+        ]
+      },
+      "id": "node/5381685589"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5381793442",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "93",
+        "addr:postcode": "5020",
+        "addr:street": "Vogelweiderstraße",
+        "contact:email": "office@vogelweiderhof.at",
+        "contact:fax": "+43 662 87122388",
+        "contact:phone": "+43 662 871223",
+        "contact:website": "http://www.vogelweiderhof.at/",
+        "name": "Hotel Vogelweiderhof",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0528177,
+          47.8196973
+        ]
+      },
+      "id": "node/5381793442"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5740635625",
+        "check_date": "2025-02-22",
+        "name": "Pension Freisaal",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0521608,
+          47.7922266
+        ]
+      },
+      "id": "node/5740635625"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6440496202",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "28",
+        "addr:postcode": "5020",
+        "addr:street": "Rainerstraße",
+        "at_bev:addr_date": "2018-10-01",
+        "check_date": "2024-04-21",
+        "contact:email": "willkommen@arte-salzburg.at",
+        "contact:phone": "+43 662 877500",
+        "contact:website": "https://www.arte-salzburg.at/hotel/das-hotel",
+        "name": "Arte Hotel",
+        "opening_hours": "24/7",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0435581,
+          47.8108541
+        ]
+      },
+      "id": "node/6440496202"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7140895234",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:postcode": "5020",
+        "charging_station": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "customers",
+        "name": "Max 70",
+        "phone": "+43 662 827 648",
+        "stars": "3",
+        "tourism": "hotel",
+        "website": "https://www.max70.at"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.018165,
+          47.8009802
+        ]
+      },
+      "id": "node/7140895234"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8117170225",
+        "addr:housenumber": "50",
+        "addr:street": "Schwarzstraße",
+        "air_conditioning": "no",
+        "check_date": "2024-07-26",
+        "email": "book@thekeepresidence.com",
+        "internet_access": "wlan",
+        "internet_access:fee": "customers",
+        "internet_access:ssid": "The Keep Eco Residence",
+        "name": "The Keep Eco Residence",
+        "operator": "iGreen Betriebs GmbH",
+        "phone": "+43 662 231002",
+        "reservation": "required",
+        "smoking": "outside",
+        "tourism": "hotel",
+        "website": "https://www.thekeepresidence.com/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0389524,
+          47.8091051
+        ]
+      },
+      "id": "node/8117170225"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8775260831",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "26",
+        "addr:postcode": "5020",
+        "addr:street": "Grazer Bundesstraße",
+        "building": "hotel",
+        "contact:phone": "+43 662 640687",
+        "contact:website": "http://www.hotel-hofmann.at/",
+        "name": "Hotel Hofmann",
+        "tourism": "hotel",
+        "website": "http://www.hotel-hofmann.at/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.076762,
+          47.8132473
+        ]
+      },
+      "id": "node/8775260831"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8972345866",
+        "addr:city": "Salzburg",
+        "addr:housenumber": "4",
+        "addr:postcode": "5020",
+        "addr:street": "Höfelgasse",
+        "brand": "PrivateCityHotels",
+        "check_date": "2024-03-12",
+        "email": "hotel@rosenvilla.com",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Hotel Rosenvilla",
+        "rooms": "15",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0663832,
+          47.7975288
+        ]
+      },
+      "id": "node/8972345866"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9902746617",
+        "addr:housenumber": "29",
+        "addr:postcode": "5020",
+        "addr:street": "Rainerstraße",
+        "name": "Hotel Cocoon Salzburg",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0435741,
+          47.8118442
+        ]
+      },
+      "id": "node/9902746617"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10822915503",
+        "access": "yes",
+        "addr:city": "Salzburg",
+        "addr:housenumber": "69",
+        "addr:postcode": "5020",
+        "addr:street": "Münchner Bundesstraße",
+        "brewery": "Trumer",
+        "entrance": "main",
+        "internet_access": "yes",
+        "name": "Hotel Gasthof Brandstätter",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0102345,
+          47.8268124
+        ]
+      },
+      "id": "node/10822915503"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11009674502",
+        "addr:city": "Salzburg",
+        "addr:housenumber": "7",
+        "addr:postcode": "5020",
+        "addr:street": "Rainerstraße",
+        "email": "salzburg.linzergasse@loftcollection.net",
+        "internet_access": "yes",
+        "internet_access:fee": "no",
+        "name": "Loft Collection Salzburg Miralbell",
+        "phone": "+43 662 234 168",
+        "rooms": "25",
+        "tourism": "hotel",
+        "website": "https://loftcollection.net/salzburg-mirabell/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0414475,
+          47.807681
+        ]
+      },
+      "id": "node/11009674502"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11037572602",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "4",
+        "addr:postcode": "5020",
+        "addr:street": "Rainerstraße",
+        "at_bev:addr_date": "2023-04-15",
+        "contact:email": "hyperion.salzburg@h-hotels.com",
+        "contact:phone": "+43 662 2342140",
+        "contact:website": "https://www.h-hotels.com/de/hyperion/hotels/hyperion-hotel-salzburg",
+        "name": "Hyperion",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0421357,
+          47.8071765
+        ]
+      },
+      "id": "node/11037572602"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11132460819",
+        "name": "Bergland",
+        "tourism": "hotel",
+        "website": "https://www.berglandhotel.at"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0538157,
+          47.8078063
+        ]
+      },
+      "id": "node/11132460819"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11869886535",
+        "addr:city": "Salzburg",
+        "addr:housenumber": "2A",
+        "addr:postcode": "5020",
+        "addr:street": "Untersbergstraße",
+        "internet_access": "yes",
+        "name": "Room 4 & 5 Apartments",
+        "phone": "+43 660 7434218",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0351781,
+          47.7983976
+        ]
+      },
+      "id": "node/11869886535"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12088819846",
+        "name": "Das Salz",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0336784,
+          47.8112822
+        ]
+      },
+      "id": "node/12088819846"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12388102401",
+        "brand": "Tribute Portfolio",
+        "brand:wikidata": "Q92021343",
+        "name": "Mayburg Salzburg",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0387819,
+          47.8155117
+        ]
+      },
+      "id": "node/12388102401"
+    }
+  ]
+}

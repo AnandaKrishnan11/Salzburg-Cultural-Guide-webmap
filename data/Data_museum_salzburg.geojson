@@ -1,0 +1,430 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-05-15T09:39:45Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/268243633",
+        "addr:city": "Salzburg",
+        "addr:housenumber": "8",
+        "addr:postcode": "5020",
+        "addr:street": "Makartplatz",
+        "alt_name": "Tanzmeisterhaus",
+        "fee": "yes",
+        "name": "Mozart Wohnhaus",
+        "name:ru": "Дом Моцарта",
+        "name:zh": "莫扎特故居",
+        "opening_hours": "Jul-Aug: Mo-Su,PH 08:30-19:00; Sep-Jun: Mo-Su,PH 09:00-17:30",
+        "phone": "+43-662-874227-40",
+        "tourism": "museum",
+        "website": "https://mozarteum.at/museums/mozart-wohnhaus/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0437708,
+          47.8026506
+        ]
+      },
+      "id": "node/268243633"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/429286016",
+        "check_date": "2024-10-05",
+        "check_date:opening_hours": "2024-10-05",
+        "fee": "yes",
+        "name": "Spielzeugmuseum",
+        "opening_hours": "Tu-Su 09:00-17:00",
+        "tourism": "museum",
+        "wheelchair": "limited",
+        "wikidata": "Q1671296",
+        "wikipedia": "de:Salzburger Spielzeugmuseum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0399208,
+          47.7996438
+        ]
+      },
+      "id": "node/429286016"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/470858038",
+        "check_date": "2023-08-22",
+        "fee": "yes",
+        "name": "Panorama Museum",
+        "name:zh": "全景博物馆",
+        "opening_hours": "Mo-Su 09:00-17:00",
+        "tourism": "museum",
+        "wheelchair": "yes",
+        "wikidata": "Q2049718",
+        "wikipedia": "de:Panorama Museum Salzburg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0475616,
+          47.7979648
+        ]
+      },
+      "id": "node/470858038"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/725098578",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "42a",
+        "addr:postcode": "5020",
+        "addr:street": "Plainstraße",
+        "at_bev:addr_date": "2018-10-01",
+        "check_date": "2023-08-22",
+        "contact:email": "info@bibelwelt.at",
+        "contact:phone": "+43 676 87467080",
+        "contact:website": "http://www.bibelwelt.at/",
+        "entry": "yes",
+        "fee": "yes",
+        "museum": "religion",
+        "museum_type": "private",
+        "name": "Bibelwelt",
+        "opening_hours": "Th-Sa 10:00-18:00; Su 11:00-18:00; Dec 24, Dec 31, easter -2 days 10:00-13:00; Nov 1 off; Dec 25 off; Jun 1 off",
+        "tourism": "museum",
+        "wheelchair": "limited",
+        "wikidata": "Q93483622"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0406837,
+          47.8156707
+        ]
+      },
+      "id": "node/725098578"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1396344740",
+        "fee": "yes",
+        "name": "Katakomben",
+        "name:cs": "Katakomby",
+        "name:ru": "Катакомбы",
+        "name:uk": "Катакомби",
+        "tourism": "museum",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.044588,
+          47.7966515
+        ]
+      },
+      "id": "node/1396344740"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2500080867",
+        "addr:city": "Salzburg",
+        "addr:housenumber": "31",
+        "addr:postcode": "5020",
+        "addr:street": "Inge-Morath-Platz",
+        "fee": "no",
+        "name": "Stadt-Galerie",
+        "opening_hours": "Tu,Th,Fr 14:00-18:00; Mo,We,Sa 11:00-15:00",
+        "source": "Survey",
+        "tourism": "museum",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0322233,
+          47.810064
+        ]
+      },
+      "id": "node/2500080867"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3751663549",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "1",
+        "addr:postcode": "5020",
+        "addr:street": "Residenzplatz",
+        "description": "Das Museum in Salzburg ist ein Zentrum barocker Kunst und Kultur.",
+        "email": "office@domquartier.at",
+        "fee": "yes",
+        "image": "https://www.domquartier.at/fileadmin/prunkraeume/raeume-gallerien/Innenhof/innenhof-residenz-salzburg.jpg",
+        "museum": "history",
+        "name": "DomQuartier",
+        "opening_hours": "We-Mo 10:00-17:00",
+        "phone": "+43 662 80422109",
+        "tourism": "museum",
+        "website": "https://www.domquartier.at/",
+        "wikidata": "Q18019409",
+        "wikipedia": "de:DomQuartier Salzburg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0455752,
+          47.7982465
+        ]
+      },
+      "id": "node/3751663549"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3751663551",
+        "addr:city": "Salzburg",
+        "addr:housenumber": "1",
+        "addr:postcode": "5020",
+        "addr:street": "Residenzplatz",
+        "check_date": "2023-08-10",
+        "description": "Die Residenzgalerie im DomQuartier Salzburg. Europäische Malerei des 16. bis 19. Jahrhunderts bildet den Bestand der Gemäldesammlung des Landes Salzburg.",
+        "email": "office@domquartier.at",
+        "fee": "yes",
+        "name": "Residenzgalerie Salzburg",
+        "official_name": "Residenzgalerie Salzburg im DomQuartier",
+        "phone": "+43 662 80 42 21 09",
+        "toilets": "yes",
+        "tourism": "museum",
+        "website": "https://www.domquartier.at/residenzgalerie/",
+        "wheelchair": "yes",
+        "wikidata": "Q1248553"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0457477,
+          47.7983574
+        ]
+      },
+      "id": "node/3751663551"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4143357124",
+        "audio_guide": "yes",
+        "level": "1",
+        "name": "Schloss Hellbrunn",
+        "name:ru": "Хелльбрунн",
+        "name:zh": "海尔布伦宫",
+        "tourism": "museum",
+        "wikidata": "Q115593"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0602803,
+          47.7621462
+        ]
+      },
+      "id": "node/4143357124"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4787833494",
+        "addr:city": "Salzburg",
+        "addr:housenumber": "30",
+        "addr:postcode": "5020",
+        "addr:street": "Schillerstraße",
+        "description": "Viewpoint to the world of geoinformation",
+        "internet_access": "wlan",
+        "name": "iDEAS:lab",
+        "operator": "Fachbereich für Geoinformatik - Z_GIS, Universität Salzburg",
+        "tourism": "museum",
+        "website": "https://ideaslab.sbg.ac.at",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0396158,
+          47.8236185
+        ]
+      },
+      "id": "node/4787833494"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5834092111",
+        "fee": "no",
+        "name": "Almpassage Austellung",
+        "tourism": "museum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0459185,
+          47.7963973
+        ]
+      },
+      "id": "node/5834092111"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7260491621",
+        "check_date": "2023-08-22",
+        "name": "Romanischer Saal",
+        "tourism": "museum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0445507,
+          47.7972733
+        ]
+      },
+      "id": "node/7260491621"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7922005685",
+        "addr:housenumber": "28-30",
+        "addr:postcode": "5020",
+        "addr:street": "Sterneckstraße",
+        "email": "info@mooncity-salzburg.at",
+        "internet_access": "wlan",
+        "name": "MOONCITY",
+        "opening_hours": "Tu-Fr 10:00-18:00; Sa 10:00-17:00",
+        "phone": "+43 662 46817440",
+        "tourism": "museum",
+        "website": "https://www.mooncity-salzburg.at/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0560546,
+          47.8087394
+        ]
+      },
+      "id": "node/7922005685"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8127277649",
+        "addr:city": "Salzburg",
+        "addr:country": "AT",
+        "addr:housenumber": "2",
+        "addr:postcode": "5020",
+        "addr:street": "Mozartplatz",
+        "check_date": "2025-03-27",
+        "check_date:opening_hours": "2025-03-27",
+        "contact:email": "info@salzburger-weihnachtsmuseum.at",
+        "contact:phone": "+43 662 843523",
+        "contact:website": "http://www.salzburger-weihnachtsmuseum.at/",
+        "fee": "yes",
+        "name": "Salzburger Weihnachtsmuseum",
+        "opening_hours": "We-Su 10:00-18:00",
+        "tourism": "museum",
+        "wikidata": "Q93425433"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0470928,
+          47.7987931
+        ]
+      },
+      "id": "node/8127277649"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10767301893",
+        "contact:email": "kontakt@weltdergifte.com",
+        "contact:phone": "+43 677 63421700",
+        "contact:website": "https://weltdergifte.com/",
+        "museum": "nature",
+        "name": "Welt der Gifte",
+        "opening_hours": "Sa 16:00-16:45,17:30-18:15; Su 10:00-10:45,11:30-12:15",
+        "tourism": "museum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0198268,
+          47.8453012
+        ]
+      },
+      "id": "node/10767301893"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11116588888",
+        "name": "Welt der Marionetten",
+        "name:en": "World of string puppets",
+        "source": "survey",
+        "tourism": "museum",
+        "website": "https://www.salzburghighlights.at/de/sightseeing-salzburg/welt-der-marionetten/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.047253,
+          47.7951597
+        ]
+      },
+      "id": "node/11116588888"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12149327201",
+        "addr:housenumber": "12",
+        "addr:street": "Gaisbergstraße",
+        "name": "LEICA Galerie",
+        "tourism": "museum",
+        "website": "https://www.leica-galerie-salzburg.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0662377,
+          47.8010453
+        ]
+      },
+      "id": "node/12149327201"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12757790796",
+        "name": "Galerie der Stadt",
+        "opening_hours": "Mo-Fr 14:00-18:00; Sa-Su 11:00-15:00",
+        "tourism": "museum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.040965,
+          47.8056334
+        ]
+      },
+      "id": "node/12757790796"
+    }
+  ]
+}
