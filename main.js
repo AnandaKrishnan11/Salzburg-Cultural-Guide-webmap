@@ -168,11 +168,6 @@ searchInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') performSearch();
 });
 
-searchBtn.addEventListener('click', performSearch);
-searchInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') performSearch();
-});
-
 // Information popup
 const infoBtn = document.getElementById('info-btn');
 infoBtn.addEventListener('click', function() {
