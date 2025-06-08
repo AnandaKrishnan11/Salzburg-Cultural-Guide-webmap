@@ -63,16 +63,27 @@ function loadData(url, icon, layerGroup, category) {
                     icon: icon,
                     riseOnHover: true
                 }).addTo(layerGroup);
+
+                // Build address parts first
+                let addressParts = [];
+                
+                if (properties['addr:housenumber']) addressParts.push(properties['addr:housenumber']);
+                if (properties['addr:street']) addressParts.push(properties['addr:street']);
+                if (properties['addr:postcode']) addressParts.push(properties['addr:postcode']);
+                if (properties['addr:city']) addressParts.push(properties['addr:city']);
+                
+                let address = addressParts.join(', ');
                 
                 let popupContent = `<h3>${properties.name || 'Unnamed'}</h3>`;
                 
                 // Add colorful category badge
                 popupContent += `<span style="display: inline-block; background-color: ${getCategoryColor(category)}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem; margin-bottom: 8px;">${category.toUpperCase()}</span>`;
-                
-                if (properties.address) {
-                    popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${properties.address}</p>`;
+
+                // Add address if available
+                if (address) {
+                    popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${address}</p>`;
                 }
-                
+
                 if (properties.phone) {
                     popupContent += `<p><i class="fas fa-phone" style="color: ${getCategoryColor(category)};"></i> ${properties.phone}</p>`;
                 }
@@ -91,17 +102,6 @@ function loadData(url, icon, layerGroup, category) {
                 if (properties.image) {
                     popupContent += `<img src="images/${properties.image}" alt="${properties.name}" style="border: 2px solid ${getCategoryColor(category)};">`;
                 }
-                // Assuming 'properties' is your feature's properties object
-                let addressParts = [];
-                
-                // Collect parts if they exist
-                if (properties['addr:housenumber']) addressParts.push(properties['addr:housenumber']);
-                if (properties['addr:street']) addressParts.push(properties['addr:street']);
-                if (properties['addr:postcode']) addressParts.push(properties['addr:postcode']);
-                if (properties['addr:city']) addressParts.push(properties['addr:city']);
-                
-                // Join with comma and space
-                let address = addressParts.join(', ');
                 marker.bindPopup(popupContent);
             });
         })
