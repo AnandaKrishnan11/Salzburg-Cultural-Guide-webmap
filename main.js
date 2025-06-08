@@ -83,6 +83,9 @@ function loadData(url, icon, layerGroup, category) {
                 if (address) {
                     popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${address}</p>`;
                 }
+                 if (properties.addr:street) {
+                    popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${properties.address}</p>`;
+                }
 
                 if (properties.phone) {
                     popupContent += `<p><i class="fas fa-phone" style="color: ${getCategoryColor(category)};"></i> ${properties.phone}</p>`;
