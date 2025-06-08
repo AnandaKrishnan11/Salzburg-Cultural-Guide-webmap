@@ -69,29 +69,53 @@ function loadData(url, icon, layerGroup, category) {
                 // Add colorful category badge
                 popupContent += `<span style="display: inline-block; background-color: ${getCategoryColor(category)}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem; margin-bottom: 8px;">${category.toUpperCase()}</span>`;
 
-              
-                 if (properties.addr:street) {
+                // Address
+                if (properties['addr:street']) {
+                    popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${properties['addr:street']}</p>`;
+                } else if (properties.address) {
                     popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${properties.address}</p>`;
                 }
+                
+                // Cuisine/type
+                if (properties.type) {
+                    popupContent += `<p><i class="fas fa-utensils" style="color: ${getCategoryColor(category)};"></i> ${properties.type}</p>`;
+                }
 
+                // Phone
                 if (properties.phone) {
                     popupContent += `<p><i class="fas fa-phone" style="color: ${getCategoryColor(category)};"></i> ${properties.phone}</p>`;
                 }
                 
+                // Website
                 if (properties.website) {
                     popupContent += `<p><i class="fas fa-globe" style="color: ${getCategoryColor(category)};"></i> <a href="${properties.website}" target="_blank">Visit Website</a></p>`;
                 }
+
+                // Opening hours
                 if (properties.opening_hours) {
                     popupContent += `<p><i class="fas fa-clock" style="color: ${getCategoryColor(category)};"></i> ${properties.opening_hours}</p>`;
                 }
                 
+                // Description
                 if (properties.description) {
                     popupContent += `<p style="font-style: italic;">${properties.description}</p>`;
                 }
-    
+
+                // Rating
+                if (properties.rating) {
+                    popupContent += `<p><i class="fas fa-star" style="color: ${getCategoryColor(category)};"></i> ${properties.rating} ⭐</p>`;
+                }
+                
+                // Total user ratings
+                if (properties.user_ratings_total) {
+                    popupContent += `<p><i class="fas fa-users" style="color: ${getCategoryColor(category)};"></i> ${properties.user_ratings_total} reviews</p>`;
+                }
+                
+                // Image
                 if (properties.image) {
                     popupContent += `<img src="images/${properties.image}" alt="${properties.name}" style="border: 2px solid ${getCategoryColor(category)};">`;
                 }
+
                 marker.bindPopup(popupContent);
             });
         })
@@ -149,8 +173,9 @@ function performSearch() {
     document.querySelectorAll('.layer-btn.active').forEach(btn => {
         const layerName = btn.dataset.layer;
         layers[layerName].eachLayer(layer => {
-            const name = layer?.feature?.properties?.name || layer?.options?.name;
-            if (name && name.toLowerCase().includes(query)) {
+            // Try to get name from properties or options
+            const name = layer?.feature?.properties?.name || layer?.options?.name || '';
+            if (name.toLowerCase().includes(query)) {
                 map.setView(layer.getLatLng(), 16);
                 layer.openPopup();
                 found = true;
@@ -171,7 +196,6 @@ searchInput.addEventListener('keypress', (e) => {
 // Information popup
 const infoBtn = document.getElementById('info-btn');
 infoBtn.addEventListener('click', function() {
-    // Customize this content with your map description
     const infoContent = `
         <div style="max-width: 400px;">
             <h2 style="color: var(--primary-color); margin-bottom: 10px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 5px;">
@@ -193,7 +217,6 @@ infoBtn.addEventListener('click', function() {
         </div>
     `;
     
-    // Create and open a popup in the center of the map
     L.popup()
         .setLatLng(map.getCenter())
         .setContent(infoContent)
@@ -214,14 +237,12 @@ locateBtn.addEventListener('click', function() {
         function(position) {
             const userLocation = [position.coords.latitude, position.coords.longitude];
             
-            // Create a custom marker for user's location
             const userIcon = L.divIcon({
                 className: 'user-marker',
                 html: '<i class="fas fa-user"></i>',
                 iconSize: [32, 32]
             });
             
-            // Add marker to map (and remove previous one if exists)
             if (window.userLocationMarker) {
                 map.removeLayer(window.userLocationMarker);
             }
@@ -233,18 +254,4 @@ locateBtn.addEventListener('click', function() {
             
             window.userLocationMarker.bindPopup("You are here!").openPopup();
             
-            // Center map on user's location
-            map.setView(userLocation, 16);
-            
-            locateBtn.innerHTML = '<i class="fas fa-map-pin"></i>';
-        },
-        function(error) {
-            alert("Unable to retrieve your location: " + error.message);
-            locateBtn.innerHTML = '<i class="fas fa-map-pin"></i>';
-        },
-        {
-            enableHighAccuracy: true,
-            timeout: 10000
-        }
-    );
-});
+            map.set
