@@ -91,7 +91,17 @@ function loadData(url, icon, layerGroup, category) {
                 if (properties.image) {
                     popupContent += `<img src="images/${properties.image}" alt="${properties.name}" style="border: 2px solid ${getCategoryColor(category)};">`;
                 }
+                // Assuming 'properties' is your feature's properties object
+                let addressParts = [];
                 
+                // Collect parts if they exist
+                if (properties['addr:housenumber']) addressParts.push(properties['addr:housenumber']);
+                if (properties['addr:street']) addressParts.push(properties['addr:street']);
+                if (properties['addr:postcode']) addressParts.push(properties['addr:postcode']);
+                if (properties['addr:city']) addressParts.push(properties['addr:city']);
+                
+                // Join with comma and space
+                let address = addressParts.join(', ');
                 marker.bindPopup(popupContent);
             });
         })
