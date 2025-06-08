@@ -79,6 +79,12 @@ function loadData(url, icon, layerGroup, category) {
                 } else if (properties.address) {
                     popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${properties.address}</p>`;
                 }
+                
+                if (properties.type) {
+                    popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${properties.type}</p>`;
+                }
+
+
 
                 // Phone
                 if (properties.phone) {
@@ -100,7 +106,6 @@ function loadData(url, icon, layerGroup, category) {
                     popupContent += `<p style="font-style: italic;">${properties.description}</p>`;
                 }
                 
-                // Image
                 if (properties.image) {
                     popupContent += `<img src="images/${properties.image}" alt="${properties.name}" style="border: 2px solid ${getCategoryColor(category)};">`;
                 }
