@@ -63,16 +63,6 @@ function loadData(url, icon, layerGroup, category) {
                     icon: icon,
                     riseOnHover: true
                 }).addTo(layerGroup);
-
-                // Build address parts first
-                let addressParts = [];
-                
-                if (properties['addr:housenumber']) addressParts.push(properties['addr:housenumber']);
-                if (properties['addr:street']) addressParts.push(properties['addr:street']);
-                if (properties['addr:postcode']) addressParts.push(properties['addr:postcode']);
-                if (properties['addr:city']) addressParts.push(properties['addr:city']);
-                
-                let address = addressParts.join(', ');
                 
                 let popupContent = `<h3>${properties.name || 'Unnamed'}</h3>`;
                 
