@@ -107,7 +107,7 @@ function getCategoryColor(category) {
 // Load data
 loadData('data/Data_museum_salzburg.geojson', museumIcon, museumLayer, 'museum');
 loadData('data/Data_hotel_Salzburg.geojson', hotelIcon, hotelLayer, 'hotel');
-loadData('data/restaurants_in_salzburg2.json', restaurantIcon, restaurantLayer, 'restaurant');
+loadData('data/restaurants_in_salzburg2.geojson', restaurantIcon, restaurantLayer, 'restaurant');
 
 // Button toggle functionality
 document.querySelectorAll('.layer-btn').forEach(btn => {
