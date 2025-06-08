@@ -74,9 +74,11 @@ function loadData(url, icon, layerGroup, category) {
                     popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${properties.address}</p>`;
                 }
                 
+                                 // Cuisine/type
                 if (properties.type) {
-                    popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${properties.type}</p>`;
+                    popupContent += `<p><i class="fas fa-utensils" style="color: ${getCategoryColor(category)};"></i> ${properties.type}</p>`;
                 }
+
 
 
                 if (properties.phone) {
@@ -92,6 +94,15 @@ function loadData(url, icon, layerGroup, category) {
                 
                 if (properties.description) {
                     popupContent += `<p style="font-style: italic;">${properties.description}</p>`;
+                }
+                // Rating
+                if (properties.rating) {
+                    popupContent += `<p><i class="fas fa-star" style="color: ${getCategoryColor(category)};"></i> ${properties.rating} ⭐</p>`;
+                }
+                
+                // Total user ratings
+                if (properties.user_ratings_total) {
+                    popupContent += `<p><i class="fas fa-users" style="color: ${getCategoryColor(category)};"></i> ${properties.user_ratings_total} reviews</p>`;
                 }
                 
                 if (properties.image) {
