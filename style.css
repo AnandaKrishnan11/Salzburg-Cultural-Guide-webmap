@@ -201,7 +201,7 @@ header p {
 
 #map-controls {
     position: absolute;
-    top: 10px; /* Was 95px — too far from top */
+    top: 90px; /* Was 95px — too far from top */
     right: 10px;
     z-index: 1000;
     display: flex;
