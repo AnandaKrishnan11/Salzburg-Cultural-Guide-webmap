@@ -4,12 +4,16 @@ const map = L.map('map', {
     zoomControl: false // We'll add our own zoom controls
 }).setView([47.8095, 13.0550], 13);
 
-// Add light grey basemap
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    subdomains: 'abcd',
-    maxZoom: 19
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
+
+// Add light grey basemap
+//L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+    //attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    //subdomains: 'abcd',
+    //maxZoom: 19
+//}).addTo(map);
 
 // Custom colorful markers
 const museumIcon = L.divIcon({
