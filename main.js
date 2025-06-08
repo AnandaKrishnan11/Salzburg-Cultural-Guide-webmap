@@ -79,10 +79,7 @@ function loadData(url, icon, layerGroup, category) {
                 // Add colorful category badge
                 popupContent += `<span style="display: inline-block; background-color: ${getCategoryColor(category)}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem; margin-bottom: 8px;">${category.toUpperCase()}</span>`;
 
-                // Add address if available
-                if (address) {
-                    popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${address}</p>`;
-                }
+              
                  if (properties.addr:street) {
                     popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${properties.address}</p>`;
                 }
