@@ -80,6 +80,9 @@ function loadData(url, icon, layerGroup, category) {
                 if (properties.website) {
                     popupContent += `<p><i class="fas fa-globe" style="color: ${getCategoryColor(category)};"></i> <a href="${properties.website}" target="_blank">Visit Website</a></p>`;
                 }
+                if (properties.opening_hours) {
+                    popupContent += `<p><i class="fas fa-clock" style="color: ${getCategoryColor(category)};"></i> ${properties.opening_hours}</p>`;
+                }
                 
                 if (properties.description) {
                     popupContent += `<p style="font-style: italic;">${properties.description}</p>`;
