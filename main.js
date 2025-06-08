@@ -4,16 +4,88 @@ const map = L.map('map', {
     zoomControl: false // We'll add our own zoom controls
 }).setView([47.8095, 13.0550], 13);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
 
-// Add light grey basemap
-//L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
-    //attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    //subdomains: 'abcd',
-    //maxZoom: 19
-//}).addTo(map);
+
+
+// List of base map providers (ordered by priority)
+const baseMaps = [
+  {
+    name: "OpenStreetMap",
+    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  },
+  {
+    name: "OpenStreetMap (Hot)",
+    url: 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
+  },
+  {
+    name: "CartoDB Positron",
+    url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>'
+  }
+];
+
+// Function to try loading tile layers sequentially
+function addFallbackTileLayer(map, providers, index = 0) {
+  if (index >= providers.length) {
+    console.error("All base maps failed to load!");
+    return;
+  }
+
+  const provider = providers[index];
+  const tileLayer = L.tileLayer(provider.url, {
+    attribution: provider.attribution
+  });
+
+  tileLayer.addTo(map);
+
+  // Check if tiles load successfully; if not, try the next provider
+  tileLayer.on('load', () => {
+    console.log(`Loaded base map: ${provider.name}`);
+  });
+
+  tileLayer.on('tileerror', () => {
+    console.warn(`Failed to load ${provider.name}, trying next...`);
+    map.removeLayer(tileLayer);
+    addFallbackTileLayer(map, providers, index + 1);
+  });
+}
+
+// Initialize the map
+const map = L.map('map').setView([51.505, -0.09], 13);
+
+// Add the first base map with fallback support
+addFallbackTileLayer(map, baseMaps);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Custom colorful markers
 const museumIcon = L.divIcon({
