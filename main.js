@@ -4,6 +4,11 @@ const map = L.map('map', {
     zoomControl: false // We'll add our own zoom controls
 }).setView([47.8095, 13.0550], 13);
 
+L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
+	maxZoom: 18,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
