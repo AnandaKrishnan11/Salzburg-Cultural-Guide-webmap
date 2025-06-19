@@ -43,7 +43,6 @@ header p {
 #map-container {
     display: flex;
     height: calc(100vh - 85px);
-    position: relative;
 }
 
 #map {
@@ -52,7 +51,6 @@ header p {
     background-color: var(--grey-basemap);
 }
 
-/* Left controls */
 #left-controls {
     width: 220px;
     background-color: white;
@@ -62,7 +60,6 @@ header p {
     flex-direction: column;
     gap: 20px;
     box-shadow: 2px 0 8px rgba(0,0,0,0.05);
-    z-index: 1000;
 }
 
 .control-section {
@@ -81,7 +78,7 @@ header p {
     gap: 8px;
 }
 
-/* Search bar */
+/* Search bar styles */
 #search-container {
     display: flex;
     margin-bottom: 5px;
@@ -164,39 +161,6 @@ header p {
     background-color: #2980b9;
 }
 
-/* Right side map controls */
-#map-controls {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-#info-btn, #locate-btn {
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
-}
-
-#info-btn:hover, #locate-btn:hover {
-    background-color: var(--secondary-color);
-    color: white;
-    transform: scale(1.05);
-}
-
 /* Popup styles */
 .leaflet-popup-content {
     min-width: 220px;
@@ -235,7 +199,7 @@ header p {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Marker styles */
+/* Marker colors */
 .museum-marker {
     background-color: #3498db;
 }
@@ -246,16 +210,6 @@ header p {
 
 .restaurant-marker {
     background-color: #e74c3c;
-}
-
-.user-marker {
-    background-color: #9b59b6;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -285,9 +239,5 @@ header p {
     
     header p {
         font-size: 0.8rem;
-    }
-    
-    #map-controls {
-        top: 80px;
     }
 }
