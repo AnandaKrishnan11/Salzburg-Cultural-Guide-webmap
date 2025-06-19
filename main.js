@@ -1,15 +1,40 @@
 // Initialize the map with light grey canvas
 const map = L.map('map', {
     preferCanvas: true,
-    zoomControl: false
+    zoomControl: false // We'll add our own zoom controls
 }).setView([47.8095, 13.0550], 13);
 
-// Add light grey basemap
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    subdomains: 'abcd',
-    maxZoom: 20
+
+var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	subdomains: 'abcd',
+	maxZoom: 20
 }).addTo(map);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Custom colorful markers
 const museumIcon = L.divIcon({
@@ -59,7 +84,7 @@ function loadData(url, icon, layerGroup, category) {
                 
                 if (!coords) return;
                 
-                const marker = L.marker([coords[1], [coords[0]], {
+                const marker = L.marker([coords[1], coords[0]], {
                     icon: icon,
                     riseOnHover: true
                 }).addTo(layerGroup);
@@ -119,7 +144,7 @@ function getCategoryColor(category) {
 // Load data
 loadData('data/Data_museum_salzburg.geojson', museumIcon, museumLayer, 'museum');
 loadData('data/Data_hotel_Salzburg.geojson', hotelIcon, hotelLayer, 'hotel');
-loadData('data/restaurants_in_salzburg2.json', restaurantIcon, restaurantLayer, 'restaurant');
+loadData('data/restaurants_in_salzburg2.geojson', restaurantIcon, restaurantLayer, 'restaurant');
 
 // Button toggle functionality
 document.querySelectorAll('.layer-btn').forEach(btn => {
@@ -144,7 +169,7 @@ document.getElementById('zoom-out').addEventListener('click', () => {
     map.zoomOut();
 });
 
-// Search functionality
+// Custom search functionality
 const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
 
@@ -158,6 +183,7 @@ function performSearch() {
     document.querySelectorAll('.layer-btn.active').forEach(btn => {
         const layerName = btn.dataset.layer;
         layers[layerName].eachLayer(layer => {
+            // Try to get name from properties or options
             const name = layer?.feature?.properties?.name || layer?.options?.name || '';
             if (name.toLowerCase().includes(query)) {
                 map.setView(layer.getLatLng(), 16);
@@ -196,7 +222,7 @@ infoBtn.addEventListener('click', function() {
                 <li>Find your current location</li>
             </ul>
             <p style="font-style: italic; margin-top: 10px;">
-                Created with Leaflet.js | Data sources: OpenStreetMap
+                Created with Leaflet.js | Data sources: [Add your data sources here]
             </p>
         </div>
     `;
@@ -238,12 +264,4 @@ locateBtn.addEventListener('click', function() {
             
             window.userLocationMarker.bindPopup("You are here!").openPopup();
             
-            map.setView(userLocation, 15);
-            locateBtn.innerHTML = '<i class="fas fa-map-pin"></i>';
-        },
-        function(error) {
-            alert("Unable to retrieve your location");
-            locateBtn.innerHTML = '<i class="fas fa-map-pin"></i>';
-        }
-    );
-});
+            map.set
