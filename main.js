@@ -1,4 +1,4 @@
-q   // Initialize the map with light grey canvas
+// Initialize the map with light grey canvas
 const map = L.map('map', {
     preferCanvas: true,
     zoomControl: false // We'll add our own zoom controls
@@ -163,85 +163,4 @@ function performSearch() {
 searchBtn.addEventListener('click', performSearch);
 searchInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') performSearch();
-});
-
-// Information popup
-const infoBtn = document.getElementById('info-btn');
-infoBtn.addEventListener('click', function() {
-    // Customize this content with your map description
-    const infoContent = `
-        <div style="max-width: 400px;">
-            <h2 style="color: var(--primary-color); margin-bottom: 10px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 5px;">
-                Salzburg Cultural Guide
-            </h2>
-            <p style="margin-bottom: 10px;">
-                This interactive map helps you explore cultural attractions, hotels, and restaurants in Salzburg, Austria.
-            </p>
-            <h3 style="color: var(--primary-color); margin: 10px 0 5px 0;">Features:</h3>
-            <ul style="margin-left: 20px; margin-bottom: 10px;">
-                <li>Toggle between museums, hotels, and restaurants</li>
-                <li>Search for specific locations</li>
-                <li>View detailed information in popups</li>
-                <li>Find your current location</li>
-            </ul>
-            <p style="font-style: italic; margin-top: 10px;">
-                Created with Leaflet.js | Data sources: [Add your data sources here]
-            </p>
-        </div>
-    `;
-    
-    // Create and open a popup in the center of the map
-    L.popup()
-        .setLatLng(map.getCenter())
-        .setContent(infoContent)
-        .openOn(map);
-});
-
-// Location finder
-const locateBtn = document.getElementById('locate-btn');
-locateBtn.addEventListener('click', function() {
-    if (!navigator.geolocation) {
-        alert("Geolocation is not supported by your browser");
-        return;
-    }
-    
-    locateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-    
-    navigator.geolocation.getCurrentPosition(
-        function(position) {
-            const userLocation = [position.coords.latitude, position.coords.longitude];
-            
-            // Create a custom marker for user's location
-            const userIcon = L.divIcon({
-                className: 'user-marker',
-                html: '<i class="fas fa-user"></i>',
-                iconSize: [32, 32]
-            });
-            
-            // Add marker to map (and remove previous one if exists)
-            if (window.userLocationMarker) {
-                map.removeLayer(window.userLocationMarker);
-            }
-            
-            window.userLocationMarker = L.marker(userLocation, {
-                icon: userIcon,
-                zIndexOffset: 1000
-            }).addTo(map);
-            
-            window.userLocationMarker.bindPopup("You are here!").openPopup();
-            
-            // Center map on user's location
-            map.setView(userLocation, 16);
-            
-            locateBtn.innerHTML = '<i class="fas fa-map-pin"></i>';
-        },
-        function(error) {
-            alert("Unable to retrieve your location: " + error.message);
-            locateBtn.innerHTML = '<i class="fas fa-map-pin"></i>';
-        },
-        {
-            enableHighAccuracy: true,
-            timeout: 10000
-        }
-    );
 });
