@@ -1,14 +1,14 @@
 // Initialize the map with light grey canvas
 const map = L.map('map', {
     preferCanvas: true,
-    zoomControl: false
+    zoomControl: false // We'll add our own zoom controls
 }).setView([47.8095, 13.0550], 13);
 
 // Add light grey basemap
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>',
     subdomains: 'abcd',
-    maxZoom: 20
+    maxZoom: 19
 }).addTo(map);
 
 // Custom colorful markers
@@ -59,7 +59,7 @@ function loadData(url, icon, layerGroup, category) {
                 
                 if (!coords) return;
                 
-                const marker = L.marker([coords[1], [coords[0]], {
+                const marker = L.marker([coords[1], coords[0]], {
                     icon: icon,
                     riseOnHover: true
                 }).addTo(layerGroup);
@@ -68,39 +68,27 @@ function loadData(url, icon, layerGroup, category) {
                 
                 // Add colorful category badge
                 popupContent += `<span style="display: inline-block; background-color: ${getCategoryColor(category)}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem; margin-bottom: 8px;">${category.toUpperCase()}</span>`;
-
-                // Address
-                if (properties['addr:street']) {
-                    popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${properties['addr:street']}</p>`;
-                } else if (properties.address) {
+                
+                if (properties.address) {
                     popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${properties.address}</p>`;
                 }
-
-                // Phone
+                
                 if (properties.phone) {
                     popupContent += `<p><i class="fas fa-phone" style="color: ${getCategoryColor(category)};"></i> ${properties.phone}</p>`;
                 }
                 
-                // Website
                 if (properties.website) {
                     popupContent += `<p><i class="fas fa-globe" style="color: ${getCategoryColor(category)};"></i> <a href="${properties.website}" target="_blank">Visit Website</a></p>`;
                 }
-
-                // Opening hours
-                if (properties.opening_hours) {
-                    popupContent += `<p><i class="fas fa-clock" style="color: ${getCategoryColor(category)};"></i> ${properties.opening_hours}</p>`;
-                }
                 
-                // Description
                 if (properties.description) {
                     popupContent += `<p style="font-style: italic;">${properties.description}</p>`;
                 }
                 
-                // Image
                 if (properties.image) {
                     popupContent += `<img src="images/${properties.image}" alt="${properties.name}" style="border: 2px solid ${getCategoryColor(category)};">`;
                 }
-
+                
                 marker.bindPopup(popupContent);
             });
         })
@@ -144,7 +132,7 @@ document.getElementById('zoom-out').addEventListener('click', () => {
     map.zoomOut();
 });
 
-// Search functionality
+// Custom search functionality
 const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
 
@@ -158,8 +146,8 @@ function performSearch() {
     document.querySelectorAll('.layer-btn.active').forEach(btn => {
         const layerName = btn.dataset.layer;
         layers[layerName].eachLayer(layer => {
-            const name = layer?.feature?.properties?.name || layer?.options?.name || '';
-            if (name.toLowerCase().includes(query)) {
+            const name = layer?.feature?.properties?.name || layer?.options?.name;
+            if (name && name.toLowerCase().includes(query)) {
                 map.setView(layer.getLatLng(), 16);
                 layer.openPopup();
                 found = true;
@@ -175,75 +163,4 @@ function performSearch() {
 searchBtn.addEventListener('click', performSearch);
 searchInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') performSearch();
-});
-
-// Information popup
-const infoBtn = document.getElementById('info-btn');
-infoBtn.addEventListener('click', function() {
-    const infoContent = `
-        <div style="max-width: 400px;">
-            <h2 style="color: var(--primary-color); margin-bottom: 10px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 5px;">
-                Salzburg Cultural Guide
-            </h2>
-            <p style="margin-bottom: 10px;">
-                This interactive map helps you explore cultural attractions, hotels, and restaurants in Salzburg, Austria.
-            </p>
-            <h3 style="color: var(--primary-color); margin: 10px 0 5px 0;">Features:</h3>
-            <ul style="margin-left: 20px; margin-bottom: 10px;">
-                <li>Toggle between museums, hotels, and restaurants</li>
-                <li>Search for specific locations</li>
-                <li>View detailed information in popups</li>
-                <li>Find your current location</li>
-            </ul>
-            <p style="font-style: italic; margin-top: 10px;">
-                Created with Leaflet.js | Data sources: OpenStreetMap
-            </p>
-        </div>
-    `;
-    
-    L.popup()
-        .setLatLng(map.getCenter())
-        .setContent(infoContent)
-        .openOn(map);
-});
-
-// Location finder
-const locateBtn = document.getElementById('locate-btn');
-locateBtn.addEventListener('click', function() {
-    if (!navigator.geolocation) {
-        alert("Geolocation is not supported by your browser");
-        return;
-    }
-    
-    locateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-    
-    navigator.geolocation.getCurrentPosition(
-        function(position) {
-            const userLocation = [position.coords.latitude, position.coords.longitude];
-            
-            const userIcon = L.divIcon({
-                className: 'user-marker',
-                html: '<i class="fas fa-user"></i>',
-                iconSize: [32, 32]
-            });
-            
-            if (window.userLocationMarker) {
-                map.removeLayer(window.userLocationMarker);
-            }
-            
-            window.userLocationMarker = L.marker(userLocation, {
-                icon: userIcon,
-                zIndexOffset: 1000
-            }).addTo(map);
-            
-            window.userLocationMarker.bindPopup("You are here!").openPopup();
-            
-            map.setView(userLocation, 15);
-            locateBtn.innerHTML = '<i class="fas fa-map-pin"></i>';
-        },
-        function(error) {
-            alert("Unable to retrieve your location");
-            locateBtn.innerHTML = '<i class="fas fa-map-pin"></i>';
-        }
-    );
 });
