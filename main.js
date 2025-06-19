@@ -1,32 +1,15 @@
 // Initialize the map with light grey canvas
 const map = L.map('map', {
     preferCanvas: true,
-    zoomControl: false // We'll add our own zoom controls
+    zoomControl: false
 }).setView([47.8095, 13.0550], 13);
 
-L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
-	maxZoom: 18,
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
-
-L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.{ext}', {
-	minZoom: 0,
-	maxZoom: 20,
-	attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-	ext: 'png'
-}).addTo(map);
-
-
 // Add light grey basemap
-//L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
-    //attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    //subdomains: 'abcd',
-    //maxZoom: 19
-//}).addTo(map);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 20
+}).addTo(map);
 
 // Custom colorful markers
 const museumIcon = L.divIcon({
@@ -76,7 +59,7 @@ function loadData(url, icon, layerGroup, category) {
                 
                 if (!coords) return;
                 
-                const marker = L.marker([coords[1], coords[0]], {
+                const marker = L.marker([coords[1], [coords[0]], {
                     icon: icon,
                     riseOnHover: true
                 }).addTo(layerGroup);
@@ -92,12 +75,6 @@ function loadData(url, icon, layerGroup, category) {
                 } else if (properties.address) {
                     popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${properties.address}</p>`;
                 }
-                
-                if (properties.type) {
-                    popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${properties.type}</p>`;
-                }
-
-
 
                 // Phone
                 if (properties.phone) {
@@ -119,6 +96,7 @@ function loadData(url, icon, layerGroup, category) {
                     popupContent += `<p style="font-style: italic;">${properties.description}</p>`;
                 }
                 
+                // Image
                 if (properties.image) {
                     popupContent += `<img src="images/${properties.image}" alt="${properties.name}" style="border: 2px solid ${getCategoryColor(category)};">`;
                 }
@@ -141,7 +119,7 @@ function getCategoryColor(category) {
 // Load data
 loadData('data/Data_museum_salzburg.geojson', museumIcon, museumLayer, 'museum');
 loadData('data/Data_hotel_Salzburg.geojson', hotelIcon, hotelLayer, 'hotel');
-loadData('data/restaurants_in_salzburg2.geojson', restaurantIcon, restaurantLayer, 'restaurant');
+loadData('data/restaurants_in_salzburg2.json', restaurantIcon, restaurantLayer, 'restaurant');
 
 // Button toggle functionality
 document.querySelectorAll('.layer-btn').forEach(btn => {
@@ -166,7 +144,7 @@ document.getElementById('zoom-out').addEventListener('click', () => {
     map.zoomOut();
 });
 
-// Custom search functionality
+// Search functionality
 const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
 
@@ -180,7 +158,6 @@ function performSearch() {
     document.querySelectorAll('.layer-btn.active').forEach(btn => {
         const layerName = btn.dataset.layer;
         layers[layerName].eachLayer(layer => {
-            // Try to get name from properties or options
             const name = layer?.feature?.properties?.name || layer?.options?.name || '';
             if (name.toLowerCase().includes(query)) {
                 map.setView(layer.getLatLng(), 16);
@@ -194,11 +171,6 @@ function performSearch() {
         alert('No matching locations found');
     }
 }
-
-searchBtn.addEventListener('click', performSearch);
-searchInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') performSearch();
-});
 
 searchBtn.addEventListener('click', performSearch);
 searchInput.addEventListener('keypress', (e) => {
@@ -224,7 +196,7 @@ infoBtn.addEventListener('click', function() {
                 <li>Find your current location</li>
             </ul>
             <p style="font-style: italic; margin-top: 10px;">
-                Created with Leaflet.js | Data sources: [Add your data sources here]
+                Created with Leaflet.js | Data sources: OpenStreetMap
             </p>
         </div>
     `;
@@ -266,4 +238,12 @@ locateBtn.addEventListener('click', function() {
             
             window.userLocationMarker.bindPopup("You are here!").openPopup();
             
-            map.set
+            map.setView(userLocation, 15);
+            locateBtn.innerHTML = '<i class="fas fa-map-pin"></i>';
+        },
+        function(error) {
+            alert("Unable to retrieve your location");
+            locateBtn.innerHTML = '<i class="fas fa-map-pin"></i>';
+        }
+    );
+});
