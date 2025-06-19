@@ -1,51 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salzburg Cultural Guide</title>
-
+    
     <!-- Google Fonts - Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <!-- Leaflet CSS -->
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin=""
-    />
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    
     <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet Search CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-search@3.0.9/dist/leaflet-search.min.css" />
+    
     <!-- Your CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1><i class="fas fa-map-marked-alt"></i> Salzburg Cultural Guide</h1>
         <p>Discover the best of Salzburg's culture and hospitality</p>
     </header>
-
+    
     <div id="map-container">
-        <!-- Right side controls -->
-        <div id="map-controls">
-            <button id="info-btn" title="About this map"><i class="fas fa-info-circle"></i></button>
-            <button id="locate-btn" title="Find my location"><i class="fas fa-map-pin"></i></button>
-        </div>
-        
         <!-- Left side controls -->
         <div id="left-controls">
-            <!-- Search bar -->
+            <!-- Search bar (always open) -->
             <div id="search-container">
-                <input type="text" id="search-input" placeholder="Search places..." />
+                <input type="text" id="search-input" placeholder="Search places...">
                 <button id="search-btn"><i class="fas fa-search"></i></button>
             </div>
-
+            
             <!-- Layer toggles -->
             <div class="control-section">
                 <h3><i class="fas fa-layer-group"></i> Categories</h3>
@@ -59,7 +50,7 @@
                     <i class="fas fa-utensils"></i> Restaurants
                 </div>
             </div>
-
+            
             <!-- Zoom controls -->
             <div class="control-section">
                 <h3><i class="fas fa-search-plus"></i> Zoom</h3>
@@ -69,18 +60,16 @@
                 </div>
             </div>
         </div>
-
+        
         <!-- The map -->
         <div id="map"></div>
     </div>
-
+    
     <!-- Leaflet JS -->
-    <script
-        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""
-    ></script>
-
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    
     <!-- Your JS -->
     <script src="main.js"></script>
 </body>
