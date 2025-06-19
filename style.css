@@ -196,51 +196,48 @@ header p {
     height: auto;
     margin: 0.5rem 0;
     border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0);}
-
-/* Map controls (top right) */
-#map-controls {
-    position: absolute;
-    top: 95px;
-    right: 10px;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-#info-btn, #locate-btn {
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
+/* Marker colors */
+.museum-marker {
+    background-color: #3498db;
 }
 
-#info-btn:hover, #locate-btn:hover {
-    background-color: var(--secondary-color);
-    color: white;
-    transform: scale(1.05);
-}
-/* User location marker */
-.user-marker {
-    background-color: #9b59b6;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.3);
+.hotel-marker {
+    background-color: #2ecc71;
 }
 
-.user-marker i {
-    margin-top: 2px;
+.restaurant-marker {
+    background-color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+    #map-container {
+        flex-direction: column;
+        height: calc(100vh - 120px);
+    }
+    
+    #left-controls {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .control-section {
+        flex: 1;
+        min-width: 45%;
+    }
+    
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
+    header p {
+        font-size: 0.8rem;
+    }
 }
