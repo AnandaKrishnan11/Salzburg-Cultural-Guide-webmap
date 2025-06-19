@@ -1,40 +1,16 @@
+
 // Initialize the map with light grey canvas
 const map = L.map('map', {
     preferCanvas: true,
     zoomControl: false // We'll add our own zoom controls
 }).setView([47.8095, 13.0550], 13);
 
-
-var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-	subdomains: 'abcd',
-	maxZoom: 20
+// Add light grey basemap
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
 }).addTo(map);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Custom colorful markers
 const museumIcon = L.divIcon({
@@ -93,39 +69,27 @@ function loadData(url, icon, layerGroup, category) {
                 
                 // Add colorful category badge
                 popupContent += `<span style="display: inline-block; background-color: ${getCategoryColor(category)}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem; margin-bottom: 8px;">${category.toUpperCase()}</span>`;
-
-                // Address
-                if (properties['addr:street']) {
-                    popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${properties['addr:street']}</p>`;
-                } else if (properties.address) {
+                
+                if (properties.address) {
                     popupContent += `<p><i class="fas fa-map-marker-alt" style="color: ${getCategoryColor(category)};"></i> ${properties.address}</p>`;
                 }
-
-                // Phone
+                
                 if (properties.phone) {
                     popupContent += `<p><i class="fas fa-phone" style="color: ${getCategoryColor(category)};"></i> ${properties.phone}</p>`;
                 }
                 
-                // Website
                 if (properties.website) {
                     popupContent += `<p><i class="fas fa-globe" style="color: ${getCategoryColor(category)};"></i> <a href="${properties.website}" target="_blank">Visit Website</a></p>`;
                 }
-
-                // Opening hours
-                if (properties.opening_hours) {
-                    popupContent += `<p><i class="fas fa-clock" style="color: ${getCategoryColor(category)};"></i> ${properties.opening_hours}</p>`;
-                }
                 
-                // Description
                 if (properties.description) {
                     popupContent += `<p style="font-style: italic;">${properties.description}</p>`;
                 }
                 
-                // Image
                 if (properties.image) {
                     popupContent += `<img src="images/${properties.image}" alt="${properties.name}" style="border: 2px solid ${getCategoryColor(category)};">`;
                 }
-
+                
                 marker.bindPopup(popupContent);
             });
         })
@@ -183,9 +147,8 @@ function performSearch() {
     document.querySelectorAll('.layer-btn.active').forEach(btn => {
         const layerName = btn.dataset.layer;
         layers[layerName].eachLayer(layer => {
-            // Try to get name from properties or options
-            const name = layer?.feature?.properties?.name || layer?.options?.name || '';
-            if (name.toLowerCase().includes(query)) {
+            const name = layer?.feature?.properties?.name || layer?.options?.name;
+            if (name && name.toLowerCase().includes(query)) {
                 map.setView(layer.getLatLng(), 16);
                 layer.openPopup();
                 found = true;
@@ -202,6 +165,7 @@ searchBtn.addEventListener('click', performSearch);
 searchInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') performSearch();
 });
+
 
 // Information popup
 const infoBtn = document.getElementById('info-btn');
@@ -264,4 +228,65 @@ locateBtn.addEventListener('click', function() {
             
             window.userLocationMarker.bindPopup("You are here!").openPopup();
             
-            map.set
+            map.setView(userLocation, 15);
+            locateBtn.innerHTML = '<i class="fas fa-location-arrow"></i>';
+        },
+        function(error) {
+            locateBtn.innerHTML = '<i class="fas fa-location-arrow"></i>';
+            alert("Unable to retrieve your location: " + error.message);
+        }
+    );
+});
+
+function getDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371000; // Earth radius in meters
+    const φ1 = lat1 * Math.PI / 180;
+    const φ2 = lat2 * Math.PI / 180;
+    const Δφ = (lat2 - lat1) * Math.PI / 180;
+    const Δλ = (lon2 - lon1) * Math.PI / 180;
+
+    const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
+              Math.cos(φ1) * Math.cos(φ2) *
+              Math.sin(Δλ/2) * Math.sin(Δλ/2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+
+    return R * c; // Distance in meters
+}
+
+document.getElementById('radius-search-btn').addEventListener('click', function () {
+    if (!window.userLocationMarker) {
+        alert("Please use the locate button to set your current location first.");
+        return;
+    }
+
+    const userLatLng = window.userLocationMarker.getLatLng();
+    const radius = parseInt(document.getElementById('radius-input').value);
+
+    if (isNaN(radius) || radius <= 0) {
+        alert("Please enter a valid radius.");
+        return;
+    }
+
+    let nearbyCount = 0;
+
+    Object.values(layers).forEach(layerGroup => {
+        layerGroup.eachLayer(marker => {
+            const markerLatLng = marker.getLatLng();
+            const distance = getDistance(userLatLng.lat, userLatLng.lng, markerLatLng.lat, markerLatLng.lng);
+
+            if (distance <= radius) {
+                if (!map.hasLayer(marker)) {
+                    map.addLayer(marker);
+                }
+                marker.setOpacity(1);
+                nearbyCount++;
+            } else {
+                marker.setOpacity(0); // Hide but don't remove
+            }
+        });
+    });
+
+    if (nearbyCount === 0) {
+        alert(`No places found within ${radius} meters.`);
+    }
+});
