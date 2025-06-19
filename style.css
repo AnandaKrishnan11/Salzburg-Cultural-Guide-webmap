@@ -196,21 +196,22 @@ header p {
     height: auto;
     margin: 0.5rem 0;
     border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0);}
-
-
-#map-controls {
-    position: absolute;
-    top: 95px; /* Was 95px — too far from top */
-    right: 10px;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0);
 }
 
-#info-btn, #locate-btn {
-    width: 40px;
+/* Floating buttons independently */
+#map-buttons {
+    position: absolute;
+    top: 120px;
+    right: 10px;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#map-buttons button {
+     width: 40px;
     height: 40px;
     background-color: white;
     border: none;
@@ -225,22 +226,38 @@ header p {
     transition: all 0.2s;
 }
 
-#info-btn:hover, #locate-btn:hover {
-    background-color: var(--secondary-color);
-    color: white;
-    transform: scale(1.05);
-}
-/* User location marker */
-.user-marker {
-    background-color: #9b59b6;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.3);
+/* Separate box for Nearby Search */
+#map-controls {
+    position: absolute;
+    top: 200px; /* Push below map-buttons */
+    right: 10px;
+    z-index: 1000;
+    background-color: white;
+    padding: 12px;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-.user-marker i {
-    margin-top: 2px;
+#radius-control {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#radius-control input {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#radius-control button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
 }
