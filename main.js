@@ -183,10 +183,10 @@ infoBtn.addEventListener('click', function() {
                 <li>Toggle between museums, hotels, and restaurants</li>
                 <li>Search for specific locations</li>
                 <li>View detailed information in popups</li>
-                <li>Find your current location</li>
+                <li>Find your current location and near by options</li>
             </ul>
             <p style="font-style: italic; margin-top: 10px;">
-                Created with Leaflet.js | Data sources: [Add your data sources here]
+                Created with Leaflet.js by Krishnan | Data sources: Open street map
             </p>
         </div>
     `;
