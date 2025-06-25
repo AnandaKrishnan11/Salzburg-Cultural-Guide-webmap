@@ -43,7 +43,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 4. Adding Markers and Popups
-5. 
+
 Static or dynamic points of interest can be displayed using markers. Each marker is interactive and can display popups with HTML content (text, images, links):
 
 const marker = L.marker([LAT, LNG]).addTo(map);
@@ -65,7 +65,7 @@ fetch('data.geojson')
   });
 
 6. Custom Styling and Interactions
-7. 
+
 The application uses both CSS and JavaScript to enhance user experience. Hover effects, click zooms, and dynamic style changes are implemented to improve usability. Example for highlighting features:
 
 function highlightFeature(e) {
