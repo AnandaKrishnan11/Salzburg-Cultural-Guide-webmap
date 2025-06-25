@@ -33,7 +33,7 @@ The following steps were followed to create and structure the project:
 5.	Added responsive meta tags for mobile compatibility
   
 
-3. Initializing the Map
+#3. Initializing the Map
 
 The map is initialized in `script.js` using Leaflet’s `L.map()` function. The base map uses OpenStreetMap tiles for a free and open-source background layer. The map is centered using geographic coordinates and a zoom level:
 '''
