@@ -1,14 +1,16 @@
+/* Root variables for theme customization and reusability */
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    --text-color: #333;
-    --light-bg: #f9f9f9;
-    --button-active: #3498db;
-    --button-inactive: #95a5a6;
-    --grey-basemap: #f5f5f5;
+    --primary-color: #2c3e50;          /* Deep blue for titles and headers */
+    --secondary-color: #3498db;        /* Blue for buttons and highlights */
+    --accent-color: #e74c3c;           /* Red accent color */
+    --text-color: #333;                /* Main text color */
+    --light-bg: #f9f9f9;               /* Light background color */
+    --button-active: #3498db;          /* Active button state */
+    --button-inactive: #95a5a6;        /* Inactive or disabled buttons */
+    --grey-basemap: #f5f5f5;           /* Fallback background for the map */
 }
 
+/* Global element reset and base font */
 * {
     margin: 0;
     padding: 0;
@@ -16,10 +18,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Body background */
 body {
     background-color: #f0f2f5;
 }
 
+/* Header bar styles */
 header {
     background: linear-gradient(135deg, #2c3e50, #4a6491);
     color: white;
@@ -40,17 +44,20 @@ header p {
     color: #ecf0f1;
 }
 
+/* Main layout container for map and controls */
 #map-container {
     display: flex;
-    height: calc(100vh - 85px);
+    height: calc(100vh - 85px); /* Fill screen below header */
 }
 
+/* Map styles */
 #map {
     flex: 1;
     height: 100%;
     background-color: var(--grey-basemap);
 }
 
+/* Left panel controls */
 #left-controls {
     width: 220px;
     background-color: white;
@@ -62,6 +69,7 @@ header p {
     box-shadow: 2px 0 8px rgba(0,0,0,0.05);
 }
 
+/* Sections inside left panel */
 .control-section {
     background-color: #f8f9fa;
     padding: 12px;
@@ -78,7 +86,7 @@ header p {
     gap: 8px;
 }
 
-/* Search bar styles */
+/* Search bar container */
 #search-container {
     display: flex;
     margin-bottom: 5px;
@@ -108,7 +116,7 @@ header p {
     background-color: #2980b9;
 }
 
-/* Layer toggle buttons */
+/* Category toggle buttons */
 .layer-btn {
     padding: 10px 12px;
     background-color: var(--btn-color, #3498db);
@@ -138,7 +146,7 @@ header p {
     background-color: #95a5a6;
 }
 
-/* Zoom controls */
+/* Custom zoom buttons */
 #zoom-controls {
     display: flex;
     gap: 8px;
@@ -161,7 +169,7 @@ header p {
     background-color: #2980b9;
 }
 
-/* Popup styles */
+/* Styling Leaflet popups */
 .leaflet-popup-content {
     min-width: 220px;
     font-family: 'Poppins', sans-serif;
@@ -199,7 +207,7 @@ header p {
     box-shadow: 0 2px 5px rgba(0,0,0);
 }
 
-/* Floating buttons independently */
+/* Floating map control buttons */
 #map-buttons {
     position: absolute;
     top: 120px;
@@ -211,7 +219,7 @@ header p {
 }
 
 #map-buttons button {
-     width: 40px;
+    width: 40px;
     height: 40px;
     background-color: white;
     border: none;
@@ -226,10 +234,10 @@ header p {
     transition: all 0.2s;
 }
 
-/* Separate box for Nearby Search */
+/* Nearby radius control panel */
 #map-controls {
     position: absolute;
-    top: 200px; /* Push below map-buttons */
+    top: 200px;
     right: 10px;
     z-index: 1000;
     background-color: white;
