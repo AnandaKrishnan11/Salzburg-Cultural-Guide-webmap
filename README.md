@@ -52,7 +52,7 @@ marker.bindPopup('<strong>Place Name</strong><br>Details here.');
 5. Displaying GeoJSON Data
 
 GeoJSON is a standard format for encoding geographic data structures. This project supports loading a GeoJSON file and rendering features with conditional styling and popups:
-
+'''
 fetch('data.geojson')
   .then(res => res.json())
   .then(data => {
@@ -63,18 +63,18 @@ fetch('data.geojson')
       }
     }).addTo(map);
   });
-
+'''
 6. Custom Styling and Interactions
 
 The application uses both CSS and JavaScript to enhance user experience. Hover effects, click zooms, and dynamic style changes are implemented to improve usability. Example for highlighting features:
-
+'''
 function highlightFeature(e) {
   e.target.setStyle({ weight: 5, color: '#666' });
 }
 function resetHighlight(e) {
   geojson.resetStyle(e.target);
 }
-
+'''
 7. Optimization and Responsiveness
 To ensure the map renders correctly across devices, the following optimizations were done:
 • CSS ensures the map container takes full width and appropriate height
