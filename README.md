@@ -31,6 +31,8 @@ The following steps were followed to create and structure the project:
 4.	Designed the HTML structure with a `<div>` for the map with height and width styling
   
 5.	Added responsive meta tags for mobile compatibility
+
+
   
 
 3. Initializing the Map
