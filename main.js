@@ -52,7 +52,7 @@ function loadData(url, icon, layerGroup, category) {
         .then(data => {
             const features = data.features || data; // Handle both GeoJSON and simple JSON formats
 
-            features.forEach(feature => { //Extarct the Geometry
+            features.forEach(feature => { //Extract the Geometry
                 const coords = feature.geometry?.coordinates || feature.coordinates;
                 const properties = feature.properties || feature;
                 if (!coords) return; // Skip if no coordinates
