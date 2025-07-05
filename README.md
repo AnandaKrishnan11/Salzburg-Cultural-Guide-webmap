@@ -5,19 +5,17 @@
 
 In today’s digital age, geographic information plays a pivotal role across a wide range of industries—from urban planning and logistics to disaster management and tourism. Web mapping technologies have revolutionized how we access and interact with geospatial data, enabling dynamic, real-time visualization accessible through any browser.
 
-This project, titled **‘Salzburg Cultural Guide’** with Leaflet, showcases a lightweight, highly customizable web-based mapping application built using **Leaflet.js**—an open-source JavaScript library for interactive maps. The application allows users to visualize locations using markers, display geospatial datasets in GeoJSON format, and enhance map interactions through popups and styling. Whether you're a student, researcher, city planner, developer, or hobbyist, this tool provides a foundation for building rich geospatial applications tailored to your domain.
+This project, titled **‘Salzburg Cultural Guide’** with Leaflet, showcases a lightweight, highly customizable web-based mapping application built using **Leaflet.js**—an open-source JavaScript library for interactive maps. The application allows users to visualize locations using markers, display geospatial datasets in GeoJSON format, and enhance map interactions through popups and styling. Whether you're a student, researcher, city planner, or traveller, this tool provides a foundation for building rich geospatial applications tailored to your domain.
 
-With zero dependencies on heavy GIS software, this project can be hosted on any static server and easily extended for use cases such as:
+---
+## 2. Objectives
 
-- Campus or tourist maps  
-- Real-time event tracking  
-- Location-based data dashboards  
-- Interactive storytelling  
-- Environmental data visualization
+
+
 
 ---
 
-## 2. Project Setup
+## 3. Project Setup
 
 The following steps were followed to create and structure the project:
 
@@ -28,66 +26,20 @@ The following steps were followed to create and structure the project:
 5. Added responsive meta tags for mobile compatibility  
 
 ---
-
-## 3. Initializing the Map
-
-The map is initialized in `script.js` using Leaflet’s `L.map()` function. The base map uses OpenStreetMap tiles for a free and open-source background layer. The map is centered using geographic coordinates and a zoom level:
-
-```javascript
-const map = L.map('map').setView([LATITUDE, LONGITUDE], ZOOM_LEVEL);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OpenStreetMap contributors'
-}).addTo(map);
-```
+## 4. Data Source
+For the study all the datasets were acquired from overpass turbo (https://overpass-turbo.eu/) which includes:
+1. Hotels 
+2. Museums
+3. Resturents  
 
 ---
 
-## 4. Adding Markers and Popups
+## 4. Implementation details
 
-Static or dynamic points of interest can be displayed using markers. Each marker is interactive and can display popups with HTML content (text, images, links):
-
-```javascript
-const marker = L.marker([LAT, LNG]).addTo(map);
-marker.bindPopup('<strong>Place Name</strong><br>Details here.');
-```
 
 ---
 
-## 5. Displaying GeoJSON Data
-
-GeoJSON is a standard format for encoding geographic data structures. This project supports loading a GeoJSON file and rendering features with conditional styling and popups:
-
-```javascript
-fetch('data.geojson')
-  .then(res => res.json())
-  .then(data => {
-    L.geoJSON(data, {
-      style: feature => ({ color: feature.properties.color || '#3388ff' }),
-      onEachFeature: (feature, layer) => {
-        layer.bindPopup(`<strong>${feature.properties.name}</strong>`);
-      }
-    }).addTo(map);
-  });
-```
-
----
-
-## 6. Custom Styling and Interactions
-
-The application uses both CSS and JavaScript to enhance user experience. Hover effects, click zooms, and dynamic style changes are implemented to improve usability. Example for highlighting features:
-
-```javascript
-function highlightFeature(e) {
-  e.target.setStyle({ weight: 5, color: '#666' });
-}
-function resetHighlight(e) {
-  geojson.resetStyle(e.target);
-}
-```
-
----
-
-## 7. Optimization and Responsiveness
+## 5. Optimization and Responsiveness
 
 To ensure the map renders correctly across devices, the following optimizations were done:
 
@@ -97,7 +49,7 @@ To ensure the map renders correctly across devices, the following optimizations 
 
 ---
 
-## 8. Future Enhancements
+## 6. Future Enhancements
 
 The project can be extended with the following features:
 
@@ -109,7 +61,7 @@ The project can be extended with the following features:
 
 ---
 
-## 9. How to Run the Project
+## 7. How to Run the Project
 
 To run the application locally:
 
@@ -117,7 +69,7 @@ To run the application locally:
    ```bash
    git clone https://github.com/AnandaKrishnan11/webmapping_leaflet.git
    ```
-2. Open `index.html` using a browser  
+2. Open `index.html` using a browser or using hosted link: 
 3. Modify coordinates, markers, or GeoJSON file to suit your data  
 
 ---
