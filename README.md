@@ -26,7 +26,16 @@ The following steps were followed to create and structure the project:
 5. Added responsive meta tags for mobile compatibility  
 
 ---
-## 4. Data Source
+
+## 4. Technologies Used
+
+- **HTML5, CSS3** – layout and styles  
+- **JavaScript (ES6)** – scripting and logic  
+- **Leaflet.js** – map rendering and interactivity  
+- **OpenStreetMap** – tile base map provider  
+---
+
+## 5. Data Source
 For the study all the datasets were acquired from overpass turbo (https://overpass-turbo.eu/) which includes:
 1. Hotels 
 2. Museums
@@ -34,12 +43,12 @@ For the study all the datasets were acquired from overpass turbo (https://overpa
 
 ---
 
-## 4. Implementation details
+## 6. Implementation details
 
 
 ---
 
-## 5. Optimization and Responsiveness
+## 7. Optimization and Responsiveness
 
 To ensure the map renders correctly across devices, the following optimizations were done:
 
@@ -49,7 +58,7 @@ To ensure the map renders correctly across devices, the following optimizations 
 
 ---
 
-## 6. Future Enhancements
+## 8. Future Enhancements
 
 The project can be extended with the following features:
 
@@ -61,7 +70,7 @@ The project can be extended with the following features:
 
 ---
 
-## 7. How to Run the Project
+## 9. How to Run the Project
 
 To run the application locally:
 
@@ -72,18 +81,10 @@ To run the application locally:
 2. Open `index.html` using a browser or using hosted link: https://anandakrishnan11.github.io/webmapping_leaflet/
 3. Modify coordinates, markers, or GeoJSON file to suit your data  
 
----
-
-## 10. Technologies Used
-
-- **HTML5, CSS3** – layout and styles  
-- **JavaScript (ES6)** – scripting and logic  
-- **Leaflet.js** – map rendering and interactivity  
-- **OpenStreetMap** – tile base map provider  
 
 ---
 
-## 11. Conclusion
+## 10. Conclusion
 
 This project serves as a practical example of how to build, style, and extend interactive web maps using Leaflet. It demonstrates clean integration of geospatial data with custom interaction and visualization features. Whether used for academic submissions, public dashboards, or private mapping tools, this codebase offers a robust foundation for deploying effective geographic applications in the browser.
 
