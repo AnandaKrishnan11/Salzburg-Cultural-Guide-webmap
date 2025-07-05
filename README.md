@@ -69,7 +69,7 @@ To run the application locally:
    ```bash
    git clone https://github.com/AnandaKrishnan11/webmapping_leaflet.git
    ```
-2. Open `index.html` using a browser or using hosted link: 
+2. Open `index.html` using a browser or using hosted link: https://anandakrishnan11.github.io/webmapping_leaflet/
 3. Modify coordinates, markers, or GeoJSON file to suit your data  
 
 ---
