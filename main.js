@@ -18,24 +18,24 @@ L.control.scale({
     maxWidth: 100,
     position: 'bottomright'}).addTo(map)
 
-// Define custom icons for each category
+// Define custom icons with colored Font Awesome icons
 const museumIcon = L.divIcon({
     className: 'museum-marker',
-    html: '<i class="fas fa-landmark"></i>',
+    html: '<i class="fas fa-landmark" style="color: #3498db;"></i>', // Blue
     iconSize: [32, 32],
     popupAnchor: [0, -16]
 });
 
 const hotelIcon = L.divIcon({
     className: 'hotel-marker',
-    html: '<i class="fas fa-hotel"></i>',
+    html: '<i class="fas fa-hotel" style="color: #2ecc71;"></i>', // Green
     iconSize: [32, 32],
     popupAnchor: [0, -16]
 });
 
 const restaurantIcon = L.divIcon({
     className: 'restaurant-marker',
-    html: '<i class="fas fa-utensils"></i>',
+    html: '<i class="fas fa-utensils" style="color: #e74c3c;"></i>', // Red
     iconSize: [32, 32],
     popupAnchor: [0, -16]
 });
