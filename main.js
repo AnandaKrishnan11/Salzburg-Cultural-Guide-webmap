@@ -16,7 +16,7 @@ L.control.scale({
     metric: true,
     imperial:true,
     maxWidth: 100,
-    position: 'bottomleft'}).addTo(map)
+    position: 'bottomright'}).addTo(map)
 
 // Define custom icons for each category
 const museumIcon = L.divIcon({
