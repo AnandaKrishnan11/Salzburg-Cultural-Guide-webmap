@@ -3,9 +3,9 @@
 
 ## 1. Introduction
 
-In today’s digital age, geographic information plays a pivotal role across a wide range of industries—from urban planning and logistics to disaster management and tourism. Web mapping technologies have revolutionized how we access and interact with geospatial data, enabling dynamic, real-time visualization accessible through any browser.
+In today’s digital age, geographic information plays a pivotal role across a wide range of industries from urban planning and logistics to disaster management and tourism. Web mapping technologies have revolutionized how we access and interact with geospatial data, enabling dynamic, real-time visualization accessible through any browser.
 
-This project, titled **‘Salzburg Cultural Guide’** with Leaflet, showcases a lightweight, highly customizable web-based mapping application built using **Leaflet.js**—an open-source JavaScript library for interactive maps. The application allows users to visualize locations using markers, display geospatial datasets in GeoJSON format, and enhance map interactions through popups and styling. Whether you're a student, researcher, city planner, or traveller, this tool provides a foundation for building rich geospatial applications tailored to your domain.
+This project, titled **‘Salzburg Cultural Guide’** with Leaflet, showcases a lightweight, highly customizable web-based mapping application built using **Leaflet.js** an open-source JavaScript library for interactive maps. The application allows users to visualize locations using markers, display geospatial datasets in GeoJSON format, and enhance map interactions through popups and styling. Whether you're a student, researcher, city planner, or traveller, this tool provides a foundation for building rich geospatial applications tailored to your domain.
 
 ---
 ## 2. Objectives
