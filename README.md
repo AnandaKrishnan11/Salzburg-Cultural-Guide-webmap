@@ -45,8 +45,41 @@ For the study all the datasets (in geojson format) were acquired from overpass t
 
 ---
 
-## 6. Implementation details
+## 6. Implementation and functionalitites
 
+1. Map Setup & Base Layers
+The map is initialized with a light-themed basemap from CARTO, chosen for its minimalist design to avoid visual clutter. A custom scale bar (showing both metric and imperial units) is added to the bottom-right corner for spatial reference. The map defaults to a centered view over Salzburg at zoom level 13, ensuring key points of interest are immediately visible.
+
+2. Custom Markers & Styling
+Three categories of locations—museums, hotels, and restaurants—are plotted using custom-designed markers:
+1. Icons: Font Awesome symbols (🏛️ for museums, 🏨 for hotels, 🍴 for restaurants) colored to match their category (blue, green, and red, respectively).
+2. Dynamic Popups: Each marker opens a rich popup containing:
+   a. Name, address, contact details, and website links.
+   b. A category badge with color-coded backgrounds.
+
+3. Layer Control & Search
+Toggle Layers: Users can show/hide categories (e.g., only museums) via buttons in the sidebar.
+   a. Keyword Search: A search bar filters markers by name across visible layers, zooming to matches and opening their popups.
+
+4. User Geolocation & Proximity Tools
+   a. "Locate Me" Button: Adds a blue user marker (👤) at the user’s GPS coordinates and centers the map.
+   b. Radius Search: Users can input a distance (in meters) to highlight nearby places within that range, hiding others.
+
+5. UI/UX Enhancements
+   a. Responsive Sidebar: Houses controls for layers, search, and zoom in a collapsible panel.
+   b. Custom Zoom Buttons: Replaced Leaflet’s default controls with larger, accessible buttons.
+   c. Info Popup: An "About" button explains the app’s purpose and features.
+
+6. Technical Highlights
+   a. Data Handling: GeoJSON files are fetched dynamically, with markers generated programmatically.
+   b. Performance: Uses preferCanvas: true for smoother rendering with large datasets.
+   c. Cross-Platform: Works on both desktop and mobile devices.
+
+7. Design Philosophy
+The interface prioritizes clarity and usability:
+   a. Color Coding: Consistent colors (blue/green/red) help users quickly identify categories.
+   b. Minimalist Basemap: Avoids distracting details, letting markers stand out.
+   c. Interactive Feedback: Markers "rise" on hover, and popups include actionable links (e.g., to websites).
 
 ---
 
