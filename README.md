@@ -9,11 +9,11 @@ This project, titled **‘Salzburg Cultural Guide’** with Leaflet, showcases a
 
 ---
 ## 2. Objectives
-This project aims to demonstrate interactive web mapping using Leaflet.js, a lightweight JavaScript library for creating dynamic maps. The goal is to:
+- This project aims to demonstrate interactive web mapping using Leaflet.js, a lightweight JavaScript library for creating dynamic maps. The goal is to:
 
-1. Display geographic data (e.g., markers, polygons, or GeoJSON layers) on an interactive map.
-2. Implement features like popups, custom icons, and layer controls for enhanced user experience.
-3. Serve as a template or reference for integrating Leaflet into web applications for geospatial visualization.
+- Display geographic data (e.g., markers, polygons, or GeoJSON layers) on an interactive map.
+- Implement features like popups, custom icons, and layer controls for enhanced user experience.
+- Serve as a template or reference for integrating Leaflet into web applications for geospatial visualization.
 
 ---
 
@@ -21,11 +21,11 @@ This project aims to demonstrate interactive web mapping using Leaflet.js, a lig
 
 The following steps were followed to create and structure the project:
 
-1. Created a GitHub repository: `webmapping_leaflet`  
-2. Added key files: `index.html`, `styles.css`, and `script.js`  
-3. Included Leaflet CDN links for stylesheet and JavaScript in the corresponding HTML section  
-4. Designed the HTML structure with a `<div>` for the map with height and width styling  
-5. Added responsive meta tags for mobile compatibility  
+- Created a GitHub repository: `webmapping_leaflet`  
+- Added key files: `index.html`, `styles.css`, and `script.js`  
+- Included Leaflet CDN links for stylesheet and JavaScript in the corresponding HTML section  
+- Designed the HTML structure with a `<div>` for the map with height and width styling  
+- Added responsive meta tags for mobile compatibility  
 
 ---
 
@@ -39,47 +39,49 @@ The following steps were followed to create and structure the project:
 
 ## 5. Data Source
 For the study all the datasets (in geojson format) were acquired from overpass turbo (https://overpass-turbo.eu/) which includes:
-1. Hotels 
-2. Museums
-3. Resturents  
+- Hotels 
+- Museums
+- Resturents  
 
 ---
 
 ## 6. Implementation and functionalitites
 
 1. Map Setup & Base Layers
-The map is initialized with a light-themed basemap from CARTO, chosen for its minimalist design to avoid visual clutter. A custom scale bar (showing both metric and imperial units) is added to the bottom-right corner for spatial reference. The map defaults to a centered view over Salzburg at zoom level 13, ensuring key points of interest are immediately visible.
+- The map is initialized with a light-themed basemap from CARTO, chosen for its minimalist design to avoid visual clutter.
+- A custom scale bar (showing both metric and imperial units) is added to the bottom-right corner for spatial reference.
+- The map defaults to a centered view over Salzburg at zoom level 13, ensuring key points of interest are immediately visible.
 
 2. Custom Markers & Styling
-Three categories of locations—museums, hotels, and restaurants—are plotted using custom-designed markers:
+- Three categories of locations—museums, hotels, and restaurants—are plotted using custom-designed markers:
 - Icons: Font Awesome symbols (🏛️ for museums, 🏨 for hotels, 🍴 for restaurants) colored to match their category (blue, green, and red, respectively).
 - Dynamic Popups: Each marker opens a rich popup containing:
    - Name, address, contact details, and website links.
    - A category badge with color-coded backgrounds.
 
 3. Layer Control & Search
-Toggle Layers: Users can show/hide categories (e.g., only museums) via buttons in the sidebar.
-   a. Keyword Search: A search bar filters markers by name across visible layers, zooming to matches and opening their popups.
+- Toggle Layers: Users can show/hide categories (e.g., only museums) via buttons in the sidebar.
+   - Keyword Search: A search bar filters markers by name across visible layers, zooming to matches and opening their popups.
 
 4. User Geolocation & Proximity Tools
-   a. "Locate Me" Button: Adds a blue user marker (👤) at the user’s GPS coordinates and centers the map.
-   b. Radius Search: Users can input a distance (in meters) to highlight nearby places within that range, hiding others.
+   - "Locate Me" Button: Adds a blue user marker (👤) at the user’s GPS coordinates and centers the map.
+   - Radius Search: Users can input a distance (in meters) to highlight nearby places within that range, hiding others.
 
 5. UI/UX Enhancements
-   a. Responsive Sidebar: Houses controls for layers, search, and zoom in a collapsible panel.
-   b. Custom Zoom Buttons: Replaced Leaflet’s default controls with larger, accessible buttons.
-   c. Info Popup: An "About" button explains the app’s purpose and features.
+   - Responsive Sidebar: Houses controls for layers, search, and zoom in a collapsible panel.
+   - Custom Zoom Buttons: Replaced Leaflet’s default controls with larger, accessible buttons.
+   - Info Popup: An "About" button explains the app’s purpose and features.
 
 6. Technical Highlights
-   a. Data Handling: GeoJSON files are fetched dynamically, with markers generated programmatically.
-   b. Performance: Uses preferCanvas: true for smoother rendering with large datasets.
-   c. Cross-Platform: Works on both desktop and mobile devices.
+   - Data Handling: GeoJSON files are fetched dynamically, with markers generated programmatically.
+   - Performance: Uses preferCanvas: true for smoother rendering with large datasets.
+   - Cross-Platform: Works on both desktop and mobile devices.
 
 7. Design Philosophy
-The interface prioritizes clarity and usability:
-   a. Color Coding: Consistent colors (blue/green/red) help users quickly identify categories.
-   b. Minimalist Basemap: Avoids distracting details, letting markers stand out.
-   c. Interactive Feedback: Markers "rise" on hover, and popups include actionable links (e.g., to websites).
+- The interface prioritizes clarity and usability:
+   - Color Coding: Consistent colors (blue/green/red) help users quickly identify categories.
+   - Minimalist Basemap: Avoids distracting details, letting markers stand out.
+   - Interactive Feedback: Markers "rise" on hover, and popups include actionable links (e.g., to websites).
 
 ---
 
@@ -109,12 +111,12 @@ The project can be extended with the following features:
 
 To run the application locally:
 
-1. Clone the repository:  
+- Clone the repository:  
    ```bash
    git clone https://github.com/AnandaKrishnan11/webmapping_leaflet.git
    ```
-2. Open `index.html` using a browser or using hosted link: https://anandakrishnan11.github.io/webmapping_leaflet/
-3. Modify coordinates, markers, or GeoJSON file to suit your data  
+- Open `index.html` using a browser or using hosted link: https://anandakrishnan11.github.io/webmapping_leaflet/
+- Modify coordinates, markers, or GeoJSON file to suit your data  
 
 
 ---
