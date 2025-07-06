@@ -23,7 +23,7 @@ The following steps were followed to create and structure the project:
 
 1. Created a GitHub repository: `webmapping_leaflet`  
 2. Added key files: `index.html`, `styles.css`, and `script.js`  
-3. Included Leaflet CDN links for stylesheet and JavaScript in the HTML head section  
+3. Included Leaflet CDN links for stylesheet and JavaScript in the corresponding HTML section  
 4. Designed the HTML structure with a `<div>` for the map with height and width styling  
 5. Added responsive meta tags for mobile compatibility  
 
@@ -52,10 +52,10 @@ The map is initialized with a light-themed basemap from CARTO, chosen for its mi
 
 2. Custom Markers & Styling
 Three categories of locations—museums, hotels, and restaurants—are plotted using custom-designed markers:
-1. Icons: Font Awesome symbols (🏛️ for museums, 🏨 for hotels, 🍴 for restaurants) colored to match their category (blue, green, and red, respectively).
-2. Dynamic Popups: Each marker opens a rich popup containing:
-   a. Name, address, contact details, and website links.
-   b. A category badge with color-coded backgrounds.
+- Icons: Font Awesome symbols (🏛️ for museums, 🏨 for hotels, 🍴 for restaurants) colored to match their category (blue, green, and red, respectively).
+- Dynamic Popups: Each marker opens a rich popup containing:
+   - Name, address, contact details, and website links.
+   - A category badge with color-coded backgrounds.
 
 3. Layer Control & Search
 Toggle Layers: Users can show/hide categories (e.g., only museums) via buttons in the sidebar.
