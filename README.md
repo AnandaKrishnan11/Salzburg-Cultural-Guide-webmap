@@ -9,7 +9,7 @@ This project, titled **‘Salzburg Cultural Guide’** with Leaflet, showcases a
 
 ---
 ## 2. Objectives
-- This project aims to demonstrate interactive web mapping using Leaflet.js, a lightweight JavaScript library for creating dynamic maps. The goal is to:
+This project aims to demonstrate interactive web mapping using Leaflet.js, a lightweight JavaScript library for creating dynamic maps. The goal is to:
 
 - Display geographic data (e.g., markers, polygons, or GeoJSON layers) on an interactive map.
 - Implement features like popups, custom icons, and layer controls for enhanced user experience.
