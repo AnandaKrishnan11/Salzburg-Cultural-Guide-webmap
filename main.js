@@ -11,6 +11,13 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png
     maxZoom: 19
 }).addTo(map);
 
+// Add a scale bar
+L.control.scale({
+    metric: true,
+    imperial:true,
+    maxWidth: 100,
+    position: 'bottomleft'}).addTo(map)
+
 // Define custom icons for each category
 const museumIcon = L.divIcon({
     className: 'museum-marker',
