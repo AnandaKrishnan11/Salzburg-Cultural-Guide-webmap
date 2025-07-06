@@ -56,7 +56,7 @@ For the study all the datasets (in geojson format) were acquired from overpass t
 - Three categories of locations—museums, hotels, and restaurants—are plotted using custom-designed markers:
 - Icons: Font Awesome symbols (🏛️ for museums, 🏨 for hotels, 🍴 for restaurants) colored to match their category (blue, green, and red, respectively).
 - Dynamic Popups: Each marker opens a rich popup containing:
-   - Name, address, contact details, and website links.
+   - Name, address, contact details, and website links (depends on the attribute data availability).
    - A category badge with color-coded backgrounds.
 
 3. Layer Control & Search
