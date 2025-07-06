@@ -38,7 +38,7 @@ The following steps were followed to create and structure the project:
 ---
 
 ## 5. Data Source
-For the study all the datasets were acquired from overpass turbo (https://overpass-turbo.eu/) which includes:
+For the study all the datasets (in geojson format) were acquired from overpass turbo (https://overpass-turbo.eu/) which includes:
 1. Hotels 
 2. Museums
 3. Resturents  
