@@ -115,7 +115,7 @@ To run the application locally:
    ```bash
    git clone https://github.com/AnandaKrishnan11/webmapping_leaflet.git
    ```
-- Open `index.html` using a browser or using hosted link: https://anandakrishnan11.github.io/webmapping_leaflet/
+- Open `index.html` using a browser or using hosted link: https://anandakrishnan11.github.io/Salzburg-Cultural-Guide-webmap/
 - Modify coordinates, markers, or GeoJSON file to suit your data  
 
 
